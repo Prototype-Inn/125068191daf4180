@@ -1,92 +1,90 @@
 <svg xmlns="http://w3.org" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
-    <!-- Griežtas Canonical tamsusis fonas su sistemos terminalo gyliu -->
-    <radialGradient id="terminalBg" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="#2C001E" /> <!-- Oficialus Ubuntu baklažanas -->
-      <stop offset="70%" stop-color="#11000A" />
-      <stop offset="100%" stop-color="#050003" />
+    <!-- Griežtas Canonical serverių gylis: tamsus baklažanas ir anglis -->
+    <radialGradient id="matrixBg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#2C001E" /> <!-- Ubuntu Core Plum -->
+      <stop offset="75%" stop-color="#11000A" />
+      <stop offset="100%" stop-color="#040002" />
     </radialGradient>
 
-    <!-- Kūrėjo mandato neoninis srautas (Binary glitch / merge efektas) -->
-    <linearGradient id="binaryLine" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Binary Heaviness / Kūrėjo srauto gradientas -->
+    <linearGradient id="heavyBinary" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#E95420" /> <!-- Ubuntu Orange -->
-      <stop offset="50%" stop-color="#77216F" /> <!-- Ubuntu Muted Purple -->
-      <stop offset="100%" stop-color="#00FF66" /> <!-- Terminal Green / Mandatas -->
+      <stop offset="50%" stop-color="#77216F" />
+      <stop offset="100%" stop-color="#00FF66" /> <!-- Terminal Green -->
     </linearGradient>
   </defs>
 
-  <!-- PWA Šoninis rėmas ir fonas (Atitinka Maskable Icon specifikacijas) -->
-  <rect width="512" height="512" rx="0" fill="url(#terminalBg)" stroke="#333" stroke-width="2" />
+  <!-- PWA Pagrindas -->
+  <rect width="512" height="512" fill="url(#matrixBg)" />
 
-  <!-- DVEJETAINIS KODAS MATRICOJE (Binary Background Disarray) -->
-  <g font-family="monospace" font-size="12" fill="#E95420" fill-opacity="0.12">
-    <text x="20" y="40">01000011 01000001 01001110 01001111</text>
-    <text x="20" y="70">01001110 01010101 01000010 01010101</text>
-    <text x="20" y="100">01000110 01001100 01000001 01010110</text>
-    <text x="20" y="430">01001101 01000101 01010010 01000111</text>
-    <text x="20" y="460">01000101 01010010 01011001 00111001</text>
-    <text x="20" y="490">01010011 01010100 01010011 01001100</text>
+  <!-- DVEJETAINIO KODO SUNKUMAS (Binary Heaviness Layer) -->
+  <!-- Teksto nepermatomumas ir tankis indikuoja kodo masyvumą fone -->
+  <g font-family="monospace" font-size="11" font-weight="900" fill="#00FF66" fill-opacity="0.06">
+    <text x="15" y="40">11101001 01010100 01001100 11111111 [HEAVY_BIN_PROD]</text>
+    <text x="15" y="65">00000000 00000001 00000011 00000111 [SYS_ALLOC_RAM]</text>
+    <text x="15" y="90">01101101 01100001 01101110 01100100 [DEV_MANDATE_OK]</text>
+    <text x="15" y="435">META_DEV://SIZE.HEX.AFFINITY_0x8FF4E2A9B9901C72A</text>
+    <text x="15" y="460">DISTRO_DISARRAY://LUBUNTU_MATE_KUBUNTU_XUBUNTU_MERGE</text>
   </g>
 
-  <!-- SISTEMOS PANELĖS IR TERMINALO RĖMAI (Kūrėjo mandatas / Panel Matrix) -->
-  <!-- Viršutinė statuso juosta -->
-  <rect x="0" y="0" width="512" height="24" fill="#11000A" fill-opacity="0.8" />
-  <circle cx="15" cy="12" r="4" fill="#E95420" />
-  <circle cx="30" cy="12" r="4" fill="#77216F" />
-  <circle cx="45" cy="12" r="4" fill="#00FF66" />
-  <text x="500" y="16" font-family="monospace" font-size="11" fill="#fff" fill-opacity="0.4" text-anchor="end">root@canonical:~#</text>
+  <!-- MONITORINGO TINKLELIS (RAM allocation boundaries) -->
+  <circle cx="256" cy="240" r="160" fill="none" stroke="#3A2335" stroke-width="1" stroke-dasharray="4 8" />
+  <circle cx="256" cy="240" r="110" fill="none" stroke="#3A2335" stroke-width="1" />
 
-  <!-- Pagrindinės panelės ašis (X-Y matrica, skirta DE Flavours suvedimui) -->
-  <line x1="256" y1="24" x2="256" y2="512" stroke="#3A2335" stroke-dasharray="5 5" stroke-width="1.5" />
-  <line x1="0" y1="268" x2="512" y2="268" stroke="#3A2335" stroke-dasharray="5 5" stroke-width="1.5" />
-
-  <!-- DISTRO DISARRAY / SULIEJAMŲ DE FLAVOURS ORBITOS -->
-  <!-- Matomas gamybinis suirutes laukas (Disarray Rings) -->
-  <circle cx="256" cy="268" r="140" fill="none" stroke="url(#binaryLine)" stroke-width="3" stroke-opacity="0.6" stroke-dasharray="20 10 5 10" />
-  <circle cx="256" cy="268" r="90" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.2" />
-
-  <!-- MAZGAI (Oficialios Canonical atšakos, jungiamos į Mergerį) -->
-  <g id="FlavoursNodes" transform="translate(256, 268)">
+  <!-- DE FLAVORS KANONAI PAGAL RAM POOL IR SVORĮ -->
+  <g id="DE_Flavors_Matrix">
     
-    <!-- Mazgas 1: KUBUNTU (KDE Plasma melsva įtaka) -->
-    <g transform="translate(-120, -70)">
-      <circle cx="0" cy="0" r="22" fill="#001F3F" stroke="#0074D9" stroke-width="2" />
-      <path d="M -8 -8 L 8 8 M -8 8 L 8 -8" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8" />
-      <text x="0" y="32" font-family="monospace" font-size="10" fill="#0074D9" text-anchor="middle" font-weight="bold">K_DE</text>
+    <!-- 1. KUBUNTU (Qt/Plasma Pool) -> Didelis RAM svoris -->
+    <g transform="translate(256, 80)">
+      <!-- Storos linijos indikuoja sunkų RAM pool užpildymą -->
+      <circle cx="0" cy="0" r="28" fill="#11000A" stroke="#E95420" stroke-width="6" />
+      <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#ffffff" stroke-width="3" />
+      <text x="0" y="-38" font-family="monospace" font-size="11" font-weight="bold" fill="#E95420" text-anchor="middle">KUBUNTU (MAX_RAM)</text>
     </g>
 
-    <!-- Mazgas 2: XUBUNTU / LUBUNTU (Lengvasis sparnas - Disarray būsena) -->
-    <g transform="translate(120, -70)">
-      <circle cx="0" cy="0" r="22" fill="#0A2510" stroke="#00FF66" stroke-width="2" />
-      <rect x="-8" y="-8" width="16" height="16" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8" />
-      <text x="0" y="32" font-family="monospace" font-size="10" fill="#00FF66" text-anchor="middle" font-weight="bold">LX_XF</text>
+    <!-- 2. LUBUNTU (LXQt) -> Merginų minimalus dedamasis svoris (Lengviausia) -->
+    <g transform="translate(116, 210)">
+      <!-- Itin plonas kontūras – minimalios RAM sąnaudos (Micro weight) -->
+      <circle cx="0" cy="0" r="24" fill="#11000A" stroke="#00FF66" stroke-width="1.5" />
+      <circle cx="0" cy="0" r="6" fill="#00FF66" />
+      <text x="-35" y="32" font-family="monospace" font-size="11" fill="#00FF66" text-anchor="middle">LUBUNTU (1.5px)</text>
     </g>
 
-    <!-- Mazgas 3: UBUNTU MATE / CINNAMON (Tradicinės panelės likučiai) -->
-    <g transform="translate(-100, 90)">
-      <circle cx="0" cy="0" r="18" fill="#221100" stroke="#E95420" stroke-width="1.5" />
-      <circle cx="0" cy="0" r="6" fill="#ffffff" fill-opacity="0.7" />
-      <text x="0" y="28" font-family="monospace" font-size="10" fill="#E95420" text-anchor="middle" font-weight="bold">MATE</text>
+    <!-- 3. XUBUNTU (Xfce) -> Mažas dedamasis svoris -->
+    <g transform="translate(396, 210)">
+      <circle cx="0" cy="0" r="24" fill="#11000A" stroke="#00FF66" stroke-width="2" />
+      <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#ffffff" stroke-width="1.5" />
+      <text x="35" y="32" font-family="monospace" font-size="11" fill="#00FF66" text-anchor="middle">XUBUNTU (2px)</text>
     </g>
 
-    <!-- CENTRINIS SULIEJIMO REAKTORIUS (The Merger Matrix / Developer Mandate) -->
-    <!-- Čia sueina visos panelės ir kodo įsipareigojimai -->
-    <g transform="translate(0, 10)">
-      <!-- Tikrasis Canonical formos laužymas (Glitch / Hexagon) -->
-      <polygon points="0,-45 39,-22 39,22 0,45 -39,22 -39,-22" fill="#11000A" stroke="#ffffff" stroke-width="4" />
-      <polygon points="0,-45 39,-22 39,22 0,45 -39,22 -39,-22" fill="none" stroke="#E95420" stroke-width="1.5" stroke-dasharray="6 3" />
-      
-      <!-- Binary "1" ir "0" susidūrimas centre -->
-      <text x="0" y="12" font-family="monospace" font-size="36" font-weight="bold" fill="#00FF66" text-anchor="middle" letter-spacing="-2">1|0</text>
+    <!-- 4. UBUNTU MATE (Traditional) -> Subalansuotas vidutinis svoris -->
+    <g transform="translate(256, 360)">
+      <circle cx="0" cy="0" r="26" fill="#11000A" stroke="#77216F" stroke-width="3.5" />
+      <line x1="-10" y1="0" x2="10" y2="0" stroke="#fff" stroke-width="2" />
+      <text x="0" y="42" font-family="monospace" font-size="11" font-weight="bold" fill="#77216F" text-anchor="middle">MATE (3.5px)</text>
     </g>
 
-    <!-- Jungiamieji vektoriai link centro (Kodo magistralė) -->
-    <path d="M -98 -48 L -30 -10" stroke="#E95420" stroke-width="2" stroke-dasharray="4 4" />
-    <path d="M 98 -48 L 30 -10" stroke="#00FF66" stroke-width="2" stroke-dasharray="4 4" />
-    <path d="M -82 72 L -25 35" stroke="#77216F" stroke-width="1.5" />
   </g>
 
-  <!-- APATINĖ PANELĖ: KŪRĖJO MANDATO INDIKATORIUS -->
+  <!-- KŪRĖJO MANDATO MAUZOLEJUS: CENTRINIS SULIEJIMO REAKTORIUS (The Binary Merger) -->
+  <!-- Čia susikerta binary heaviness ir išsiderinusios sistemos -->
+  <g transform="translate(256, 240)">
+    <!-- Magistraliniai jungiamieji srautai (Vector paths) -->
+    <line x1="0" y1="-132" x2="0" y2="-40" stroke="url(#heavyBinary)" stroke-width="4" stroke-dasharray="2 2" />
+    <line x1="-116" y1="-30" x2="-40" y2="0" stroke="url(#heavyBinary)" stroke-width="2" />
+    <line x1="116" y1="-30" x2="40" y2="0" stroke="url(#heavyBinary)" stroke-width="2" />
+    <line x1="0" y1="94" x2="0" y2="40" stroke="url(#heavyBinary)" stroke-width="3" />
+
+    <!-- Centrinis šešiakampis branduolys su maksimaliu "Binary Heaviness" svoriu -->
+    <polygon points="0,-48 42,-24 42,24 0,48 -42,24 -42,-24" fill="#040002" stroke="url(#heavyBinary)" stroke-width="8" />
+    
+    <!-- PWA Indikacija centre -->
+    <text x="0" y="10" font-family="monospace" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-1">PWA</text>
+  </g>
+
+  <!-- KANONINĖS BŪSENOS PANELĖ (Developer Mandate Dashboard) -->
   <rect x="0" y="488" width="512" height="24" fill="#E95420" />
-  <text x="256" y="505" font-family="monospace" font-size="12" font-weight="bold" fill="#11000A" text-anchor="middle" letter-spacing="2">MANDATE://DISTRO.DISARRAY.OK</text>
+  <text x="15" y="504" font-family="monospace" font-size="11" font-weight="900" fill="#11000A">CORE_DEV_MANDATE://DISTRO_MERGER.OK</text>
+  <text x="497" y="504" font-family="monospace" font-size="11" font-weight="900" fill="#11000A" text-anchor="end">RAM_POOL_LOADED</text>
 </svg>
