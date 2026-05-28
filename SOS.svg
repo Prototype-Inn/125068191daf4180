@@ -1,70 +1,73 @@
 <svg xmlns="http://w3.org" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
-    <!-- Griežtas Canonical serverių gylis: tamsus baklažanas ir anglis -->
-    <radialGradient id="matrixBg" cx="50%" cy="50%" r="75%">
-      <stop offset="0%" stop-color="#2C001E" /> <!-- Ubuntu Core Plum -->
-      <stop offset="75%" stop-color="#11000A" />
-      <stop offset="100%" stop-color="#040002" />
+    <!-- Šiltas, jaukus ir įtraukiantis geltonas sensorinis fonas (vengiant violetinės) -->
+    <radialGradient id="playBg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#FFF9E6" />
+      <stop offset="75%" stop-color="#FFE699" />
+      <stop offset="100%" stop-color="#FFD666" />
     </radialGradient>
 
-    <!-- Binary Heaviness / Kūrėjo srauto gradientas -->
-    <linearGradient id="heavyBinary" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E95420" /> <!-- Ubuntu Orange -->
-      <stop offset="50%" stop-color="#77216F" />
-      <stop offset="100%" stop-color="#00FF66" /> <!-- Terminal Green -->
+    <!-- Linksmas, žaismingas srauto gradientas centrinėms jungtims -->
+    <linearGradient id="happyStream" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E95420" /> <!-- Kanoninė Ubuntu oranžinė -->
+      <stop offset="50%" stop-color="#FF851B" /> <!-- Šilta oranžinė -->
+      <stop offset="100%" stop-color="#2ECC40" /> <!-- Ryški ugdomoji žalia -->
     </linearGradient>
   </defs>
 
-  <!-- Pagrindinis išorinis Canonical stiliaus skritulys -->
-  <circle cx="256" cy="256" r="250" fill="url(#matrixBg)" stroke="#333" stroke-width="4" />
+  <!-- Pagrindinis išorinis minkštas skritulys (kaip ugdomasis kilimėlis) -->
+  <circle cx="256" cy="256" r="245" fill="url(#playBg)" stroke="#E95420" stroke-width="12" />
 
-  <!-- MONITORINGO TINKLELIS (RAM allocation boundaries) -->
-  <circle cx="256" cy="256" r="160" fill="none" stroke="#3A2335" stroke-width="1.5" stroke-dasharray="4 8" />
-  <circle cx="256" cy="256" r="110" fill="none" stroke="#3A2335" stroke-width="1.5" />
+  <!-- Ugdomieji sensoriniai taškeliai fone (paskatinimas tyrinėti) -->
+  <circle cx="256" cy="256" r="165" fill="none" stroke="#FF851B" stroke-width="4" stroke-dasharray="8 12" stroke-opacity="0.5" />
+  <circle cx="256" cy="256" r="115" fill="none" stroke="#2ECC40" stroke-width="3" stroke-dasharray="6 10" stroke-opacity="0.4" />
 
-  <!-- DE FLAVORS MAZGAI PAGAL RAM POOL IR SVORĮ (Be teksto) -->
-  <g id="DE_Flavors_Matrix">
+  <!-- DRAUGIŠKI DE FLAVORS MAZGAI (Minkštos kaladėlių formos pagal svorį ir RAM Pool) -->
+  <g id="Play_Flavors_Matrix">
     
-    <!-- 1. KUBUNTU (Qt/Plasma Pool) -> Didelis RAM svoris -->
-    <g transform="translate(256, 96)">
-      <!-- Storos linijos indikuoja sunkų RAM pool užpildymą -->
-      <circle cx="0" cy="0" r="28" fill="#11000A" stroke="#E95420" stroke-width="6" />
-      <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#ffffff" stroke-width="3" />
+    <!-- 1. KUBUNTU (Masyvus RAM svoris) -> Didelis, minkštas, saugus melsvas rutulys -->
+    <g transform="translate(256, 100)">
+      <!-- Storos, suapvalintos formos, draugiškos vaikų motorikai -->
+      <circle cx="0" cy="0" r="34" fill="#0074D9" stroke="#E95420" stroke-width="8" />
+      <!-- Rankutėmis pieštas kryžiukas centre -->
+      <path d="M-10,-10 C-5,-5 5,-5 10,-10 M-10,10 C-5,5 5,5 10,10" stroke="#ffffff" stroke-width="5" stroke-linecap="round" fill="none" />
     </g>
 
-    <!-- 2. LUBUNTU (LXQt) -> Minimalus svoris (Plona linija) -->
-    <g transform="translate(96, 256)">
-      <!-- Itin plonas kontūras – minimalios RAM sąnaudos (Micro weight) -->
-      <circle cx="0" cy="0" r="24" fill="#11000A" stroke="#00FF66" stroke-width="1.5" />
-      <circle cx="0" cy="0" r="6" fill="#00FF66" />
+    <!-- 2. LUBUNTU (Mažiausias RAM svoris) -> Lengvas, infantilus žalias lašelis/rutuliukas -->
+    <g transform="translate(100, 256)">
+      <!-- Plona, bet aiški linija – lengva prieinamumui -->
+      <circle cx="0" cy="0" r="24" fill="#2ECC40" stroke="#FFF" stroke-width="4" />
+      <circle cx="0" cy="0" r="8" fill="#FFF" />
     </g>
 
-    <!-- 3. XUBUNTU (Xfce) -> Lengvas-vidutinis svoris -->
-    <g transform="translate(416, 256)">
-      <circle cx="0" cy="0" r="24" fill="#11000A" stroke="#00FF66" stroke-width="2.5" />
-      <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#ffffff" stroke-width="2" />
+    <!-- 3. XUBUNTU (Lengvas-vidutinis svoris) -> Švelnus, suapvalintas kvadratas (taktilinė kaladėlė) -->
+    <g transform="translate(412, 256)">
+      <rect x="-24" y="-24" width="48" height="48" rx="14" fill="#FF851B" stroke="#FFF" stroke-width="4" />
+      <circle cx="0" cy="0" r="7" fill="#FFF" />
     </g>
 
-    <!-- 4. UBUNTU MATE / CINNAMON -> Subalansuotas vidutinis svoris -->
-    <g transform="translate(256, 416)">
-      <circle cx="0" cy="0" r="26" fill="#11000A" stroke="#77216F" stroke-width="4" />
-      <line x1="-10" y1="0" x2="10" y2="0" stroke="#fff" stroke-width="2.5" />
+    <!-- 4. UBUNTU MATE (Subalansuotas vidurys) -> Linksmas geltonas apskritimas su linksmu brūkšneliu -->
+    <g transform="translate(256, 412)">
+      <circle cx="0" cy="0" r="28" fill="#FFDC00" stroke="#E95420" stroke-width="6" />
+      <line x1="-12" y1="0" x2="12" y2="0" stroke="#E95420" stroke-width="6" stroke-linecap="round" />
     </g>
 
   </g>
 
-  <!-- CENTRINIS SULIEJIMO REAKTORIUS (The Binary Merger / Merging 'em all!) -->
+  <!-- ŽAISMINGAS SULIEJIMO CENTRAS (The Mega-Merge Puzzle Piece) -->
   <g transform="translate(256, 256)">
-    <!-- Magistraliniai jungiamieji srautai link centro -->
-    <line x1="0" y1="-132" x2="0" y2="-48" stroke="url(#heavyBinary)" stroke-width="5" stroke-dasharray="2 2" />
-    <line x1="-136" y1="0" x2="-48" y2="0" stroke="url(#heavyBinary)" stroke-width="3" />
-    <line x1="136" y1="0" x2="48" y2="0" stroke="url(#heavyBinary)" stroke-width="3" />
-    <line x1="0" y1="134" x2="0" y2="48" stroke="url(#heavyBinary)" stroke-width="4" />
+    <!-- Minkštos, storos, suapvalintos jungtys link centro (kaip medinio traukinuko bėgiai) -->
+    <line x1="0" y1="-122" x2="0" y2="-46" stroke="url(#happyStream)" stroke-width="12" stroke-linecap="round" />
+    <line x1="-132" y1="0" x2="-46" y2="0" stroke="url(#happyStream)" stroke-width="10" stroke-linecap="round" />
+    <line x1="132" y1="0" x2="46" y2="0" stroke="url(#happyStream)" stroke-width="10" stroke-linecap="round" />
+    <line x1="0" y1="124" x2="0" y2="46" stroke="url(#happyStream)" stroke-width="10" stroke-linecap="round" />
 
-    <!-- Centrinis branduolys su maksimaliu "Binary Heaviness" svoriu (Šešiakampis) -->
-    <polygon points="0,-48 42,-24 42,24 0,48 -42,24 -42,-24" fill="#040002" stroke="url(#heavyBinary)" stroke-width="8" />
+    <!-- Centrinė dėlionės dalis (Minkštas šešiakampis suapvalintais kampais – Binary Heaviness) -->
+    <path d="M 0,-44 Q 38,-22 38,22 Q 0,44 -38,22 Q -38,-22 0,-44 Z" fill="#E95420" stroke="#FFF" stroke-width="6" />
     
-    <!-- Grynasis geometrinis kryžius / sintezės simbolis pačiame centre (be raidžių) -->
-    <circle cx="0" cy="0" r="10" fill="#ffffff" />
+    <!-- Šypsenėlė pačiame centre (Sintezės ir bendrystės džiaugsmas!) -->
+    <circle cx="-10" cy="-6" r="4" fill="#FFF" />
+    <circle cx="10" cy="-6" r="4" fill="#FFF" />
+    <path d="M -12,8 Q 0,20 12,8" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round" />
   </g>
 </svg>
