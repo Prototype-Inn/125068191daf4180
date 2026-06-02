@@ -1,79 +1,51 @@
-<svg xmlns="http://w3.org" viewBox="0 0 512 512" width="100%" height="100%">
+<svg xmlns="http://w3.org" viewBox="0 0 256 256" width="100%" height="auto">
   <defs>
-    <!-- Griežtas, bet kontrastingas PEGI 13 Lightpack fonas (vengiant slegiančios violetinės) -->
-    <radialGradient id="pegiBg" cx="50%" cy="50%" r="75%">
-      <stop offset="0%" stop-color="#FFFDF9" />
-      <stop offset="60%" stop-color="#FFDCA8" />
-      <stop offset="100%" stop-color="#E95420" /> <!-- Grynasis Ubuntu korporatyvinis akcentas -->
-    </radialGradient>
-
-    <!-- Gautas techninis švytėjimas – reprezentuoja Umidigi BT disarray srautą -->
-    <filter id="btDisarrayGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="10" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-
-    <!-- PHP STEM gamybinis vektoriaus gradientas -->
-    <linearGradient id="phpStemCore" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E95420" />
-      <stop offset="100%" stop-color="#00FF66" /> <!-- Gamybinė terminalo žalia -->
+    <!-- Griežtas COSMIC / Rust tamsusis fonas su neoniniu Pop!_OS Teal švytėjimu -->
+    <linearGradient id="nexusGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#7000FF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#E95420" stop-opacity="0.8"/>
     </linearGradient>
+    <style>
+      .nexus-bg { fill: #111116; stroke: #222230; stroke-width: 3; }
+      .outer-nexus { fill: none; stroke: url(#nexusGlow); stroke-width: 5; stroke-linecap: round; }
+      .stylus-unit { fill: none; stroke: #FFFFFF; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .screen-grid { fill: none; stroke: #313143; stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.5; }
+      .core-node { stroke-width: 2; }
+      .txt-title { fill: #FFFFFF; font-family: sans-serif; font-size: 11px; font-weight: bold; letter-spacing: 1.5px; }
+      .txt-code { fill: #A5ADCB; font-family: 'Courier New', monospace; font-size: 9px; font-weight: bold; }
+    </style>
   </defs>
 
-  <!-- Pagrindinis išorinis Canonical stiliaus skritulys -->
-  <circle cx="256" cy="256" r="248" fill="url(#pegiBg)" stroke="#E95420" stroke-width="8" />
+  <!-- 1. Pagrindinis įrenginio korpusas (Matinis anglies kvadratas) -->
+  <rect width="248" height="248" x="4" y="4" rx="36" class="nexus-bg"/>
+  
+  <!-- 2. Mobiliojo ekrano tinklelis (Nexus Mobile UX) -->
+  <path d="M40 40 H216 V216 H40 Z" class="screen-grid"/>
+  <line x1="128" y1="40" x2="128" y2="216" class="screen-grid"/>
+  <line x1="40" y1="128" x2="216" y2="128" class="screen-grid"/>
 
-  <!-- Didinamas socialinis atstumas: izoliaciniai matricos žiedai -->
-  <circle cx="256" cy="256" r="185" fill="none" stroke="#FFF" stroke-width="4" stroke-opacity="0.5" filter="url(#btDisarrayGlow)" />
-  <circle cx="256" cy="256" r="140" fill="none" stroke="#E95420" stroke-width="1.5" stroke-dasharray="12 16" stroke-opacity="0.3" />
+  <!-- 3. Nexus Išorinis Karkasas (5 konvergencijos taškai aplink perimetrą) -->
+  <path d="M50 70 L128 35 L206 70 V160 L128 220 L50 160 Z" class="outer-nexus"/>
 
-  <!-- UBUNTU FLAVORS KANONAI: RAM SVORIO ASIMETRIJA (Didesnis atstumas tarp mazgų) -->
-  <g id="Social_Distance_Flavors">
-    
-    <!-- 1. KUBUNTU (Maksimalus RAM - 8px) -> Nustumtas tolyn į šiaurę -->
-    <g transform="translate(256, 76)">
-      <circle cx="0" cy="0" r="32" fill="#FFF" stroke="#E95420" stroke-width="8" filter="url(#btDisarrayGlow)" />
-      <circle cx="0" cy="0" r="10" fill="none" stroke="#E95420" stroke-width="4" />
-    </g>
+  <!-- 4. Integruotas Stylus įvesties elementas (Kertantis vektorius per visą karkasą) -->
+  <path d="M70 190 L170 90 M170 90 L160 80 M170 90 L180 100" class="stylus-unit"/>
+  <circle cx="65" cy="195" r="4" fill="#00F0FF" /> <!-- Stylus aktyvavimo taškas -->
 
-    <!-- 2. LUBUNTU (Minimalus RAM - 2px) -> Nustumtas giliai į vakarus (uPods Streetz BT linija) -->
-    <g transform="translate(76, 256)">
-      <circle cx="0" cy="0" r="24" fill="#00FF66" stroke="#FFF" stroke-width="2" />
-      <rect x="-5" y="-5" width="10" height="10" fill="#FFF" />
-    </g>
+  <!-- 5. 5 Konvergencijos mazgai (C-Suite + Ubuntu + Idol Hibridai) -->
+  <!-- Mazgas 1: Povilas & Cho (Kylin Oranžinė) -->
+  <circle cx="128" cy="35" r="7" fill="#E95420" class="core-node" stroke="#FFFFFF"/>
+  <!-- Mazgas 2: daemon & Camila (Lubuntu Mėlyna) -->
+  <circle cx="206" cy="70" r="7" fill="#36A2EB" class="core-node" stroke="#FFFFFF"/>
+  <!-- Mazgas 3: Vytis & Leecho (Xubuntu Gelsva) -->
+  <circle cx="206" cy="160" r="7" fill="#FFB900" class="core-node" stroke="#FFFFFF"/>
+  <!-- Mazgas 4: adm & Lauren (Kubuntu Žalia) -->
+  <circle cx="128" cy="220" r="7" fill="#87A96B" class="core-node" stroke="#FFFFFF"/>
+  <!-- Mazgas 5: Gintaras & Liz (Budgie Šviesiai Mėlyna) -->
+  <circle cx="50" cy="115" r="7" fill="#00F0FF" class="core-node" stroke="#FFFFFF"/>
 
-    <!-- 3. XUBUNTU (Lengvas-vidutinis - 3.5px) -> Tolimas rytų mazgas (uWatch ašis) -->
-    <g transform="translate(436, 256)">
-      <circle cx="0" cy="0" r="26" fill="#E95420" stroke="#FFF" stroke-width="3.5" />
-      <circle cx="0" cy="0" r="6" fill="#FFF" />
-    </g>
-
-    <!-- 4. UBUNTU MATE (Vidutinis - 5px) -> Maksimaliai nutolusi pietų bazė -->
-    <g transform="translate(256, 436)">
-      <circle cx="0" cy="0" r="28" fill="#FFF" stroke="#E95420" stroke-width="5" />
-      <line x1="-12" y1="0" x2="12" y2="0" stroke="#E95420" stroke-width="5" stroke-linecap="round" />
-    </g>
-  </g>
-
-  <!-- U-TURN MERGER BRANDUOLYS: PHP STEM ASINCHRONINĖ AŠIS (uBotu / uWatch) -->
-  <g transform="translate(256, 256)">
-    <!-- „U-Turn“ formos asimetrinės magistralės, jungiančios išsiderinusį aparatūros srautą -->
-    <!-- Šiaurinis U-Turn srautas -->
-    <path d="M -16,-148 L -16,-46 C -16,-30 16,-30 16,-46 L 16,-148" fill="none" stroke="url(#phpStemCore)" stroke-width="12" stroke-linecap="round" />
-    
-    <!-- Horizontalių srautų disarray (uPods streetz išsklaidymas) -->
-    <line x1="-148" y1="0" x2="-46" y2="0" stroke="url(#phpStemCore)" stroke-width="6" stroke-linecap="round" />
-    <line x1="148" y1="0" x2="46" y2="0" stroke="url(#phpStemCore)" stroke-width="8" stroke-linecap="round" />
-    <line x1="0" y1="148" x2="0" y2="46" stroke="url(#phpStemCore)" stroke-width="10" stroke-linecap="round" />
-
-    <!-- Centrinis techninis mazgas – Švari Canonical geometrijos laužymo kapsulė -->
-    <circle cx="0" cy="0" r="46" fill="#FFF" stroke="url(#phpStemCore)" stroke-width="6" filter="url(#btDisarrayGlow)" />
-    
-    <!-- KANONINIS UBUNTU FLAVORS TRIKAMPIS (Pakeičia emoji -> PEGI13 šou branduolys) -->
-    <!-- Griežtas, žaismingas, kampuotas sintezės elementas -->
-    <polygon points="0,-24 24,18 -24,18" fill="url(#phpStemCore)" />
-    
-    <!-- Vidinis stabilizuojantis binary taškas trikampio centre -->
-    <circle cx="0" cy="4" r="5" fill="#FFF" />
-  </g>
+  <!-- 6. Įrenginio identifikavimo tekstas (ICO Metrika) -->
+  <text x="128" y="238" text-anchor="middle" class="txt-title">NEXUS MOBILE UNIT</text>
+  <text x="128" y="20" text-anchor="middle" class="txt-code">STYLUS // ICO_v5.0_GOT!!!</text>
 </svg>
+
