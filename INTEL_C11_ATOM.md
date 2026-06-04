@@ -8,4 +8,9 @@ Zip #444 | 0:31 🏁
 With no hints & no backtracks
 [lnkd.in/zip](?).
 
-## /../
+## SQL
+
+```shell
+sudo npm install -g avatar-generator
+avatar-generator -I $USER@$(hostname -s) -D /../  > avatar.png
+```
