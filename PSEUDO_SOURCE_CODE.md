@@ -202,3 +202,13 @@ traceroute to gdi-core-establishment (prototype.in -> GDI), 30 hops max
 ```shell
 ubuntu@gdi-node1:~$ sudo pro attach --production-pirate-key=ESM-NOBLE-NUMBAT-99X
 ```
+
+```shell
+ubuntu@gdi-node1:~$ rm -rf ~/.streetz && touch ~/.streetz && chmod 000 ~/.streetz
+[SUCCESS] Blob deactivated. Convoy is now completely invisible on the streets.
+
+ubuntu@gdi-node1:~$ libvlc-streamer --input=youtube/VEVOHQ --output=hdmi-fhd-out --color=#00FFCC
+[STREAMING] VEVO High-Definition HQ stream captured.
+[HARDWARE] HDMI Output Framerate: 60fps (Deterministinis RT-Kernel valdymas).
+[STATUS] ESM Pirate Mode: ACTIVE. Casio Chrono: 12:56:14 UTC.
+```
