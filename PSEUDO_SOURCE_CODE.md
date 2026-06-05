@@ -163,3 +163,18 @@ ubuntu@gdi-establishment-node1:~$ systemctl status trivago-merger.service
 [2026-06-05 12:48:22] CLI-MODE: Dropping all peripheral multi-dimensional calculations.
 [2026-06-05 12:48:22] SUBSYSTEM: Limiting telemetry focus strictly to the COMET viewer.
 ```
+
+```shell
+ubuntu@gdi-establishment-node1:~$ comet-view --stream --core=3 --format=hex
+
+--- COMET REAL-TIME STREAM (STRICT LOOK) ---
+[POLLING] Connecting to GDI Gateway via Trivago Merger Router...
+[CONNECTED] Stream established. Buffer latency: 0.002ms (RT-Kernel PATH priority)
+
+[0x001A] SPEED: 140 km/h (Opel/Renault CAN-bus synced)
+[0x001B] MUTEX: VortexMutex STATUS -> STATIC_LOCKED (No corruption)
+[0x001C] ENEMY: Funds Advisory "Red Bots" distance -> 1.4km (STABLE)
+[0x001D] SYSTEM: Ubuntu CLI Load Average: 0.05, 0.02, 0.01
+[0x001E] CHRONO: Casio Sync Match -> OK (12:48:22.002491)
+--------------------------------------------
+```
