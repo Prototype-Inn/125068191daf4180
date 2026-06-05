@@ -303,3 +303,8 @@ ubuntu@gdi-node1:~$ cat /dev/rt-laser-telemetry | jq '.'
   "engine_state": "STABLE"
 }
 ```
+
+```shell
+[2026-06-05 13:19:34] SYSTEM: jq parse error FIXED.
+[2026-06-05 13:19:34] LASER: Atomic framework lock finalized on Noble Numbat server.
+```
