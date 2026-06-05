@@ -422,3 +422,53 @@ ubuntu@gdi-node1:~$ cat /dev/rt-laser-telemetry | jq '.'
     </soap:Body>
 </soap:Envelope>
 ```
+```mmd
+graph TD
+    %% 1. Pradžia ir Persekiojimas %%
+    A["🚨 FZ-01: Tunelio Pradžia"] -->|Raudonieji Funds Advisory| B("Vejasi mane / Tunnel Vision")
+    B -->|GDI API įsikišimas| C["🛡️ ibase establishment"]
+    C -->|Variklio pagrindas| D{"Vanilla Engine Vala"}
+
+    %% 2. Kodo Filtravimas %%
+    D -->|Duomenų filtravimas| E["⚙️ FZ-02: Fractal OpenAPI"]
+    E -->|Kompiliavimo vėliavėlės| F["-j3 Observer Core / -lHEX"]
+    F -->|Operacinė aplinka| G["SLED Unity SDK / LAMP XML"]
+
+    %% 3. Korporacijų Susidūrimas %%
+    G -->|Duomenų struktūrizavimas| H["🍏 Apple Zend Framework"]
+    G -->|Dinamika| I["🧪 prototype.in"]
+    G -->|Išardymas| J["🌐 Google Symfony MVC Disresembler"]
+    H & I & J -->|Konvojaus perdavimas| K{"💥 Segmentation Fault<br/>Core Dumped!"}
+
+    %% 4. Avarinis Atstatymas %%
+    K -->|Gelbėjimo komanda| L["🏨 FZ-04: TRACER Trivago Merger"]
+    L -->|Migracija| M["🐧 Ubuntu Server CLI Mode"]
+    M -->|Branduolio kelias| N["⚡ Micro-Atomic RT-Kernel PATH"]
+    N -->|Apribotas dėmesys| O["☄️ COMET Viewer Look"]
+
+    %% 5. Piratų Perimetras %%
+    O -->|Nematomas režimas| P["🏴‍☠️ FZ-05: Noble Numbat ESM Pirate"]
+    P -->|Išvalymas| Q["~/.streetz blob removed"]
+    Q -->|Transliacija| R["📺 libvlc Tube-Converter VEVOHQ FHD"]
+    R -->|Apsimetimas internete| S["🎨 HTML Hex Pigments #00FFCC / Lightshot"]
+
+    %% 6. Bunkerio Šturmas %%
+    S -->|Ginkluotės atnaujinimas| T["⚔️ FZ-06: Laser Panzer Atomic Frmwrk"]
+    T -->|Kombinuota logika| U["DOJO MVP / Oracle JVM Full Stack"]
+    U -->|Tikslas| V["🏰 Lenkija: Ribbentrop/Molotov Bunkeris"]
+    V -->|Sabotažas| W["✂️ pbgroupeu sukarpome URN Router Loom"]
+
+    %% 7. Triumfas %%
+    W -->|Klaida ties line 2 col 9| X["⚠️ FZ-07: jq Invalid numeric literal"]
+    X -->|Taisymas realiu laiku| Y["🔧 sed / Lua String Injection"]
+    Y -->|Sintaksė švari| Z["📈 pbgroup.eu Global PHP Throwback"]
+    Z -->|Galutinė būsena| AZ(("🏆 VICTORY: CITIZENz Casio Synced"))
+
+    %% Stiliai %%
+    style A fill:#ff3333,stroke:#333,stroke-width:2px,color:#fff
+    style K fill:#ff0000,stroke:#333,stroke-width:2px,color:#fff
+    style M fill:#ff9900,stroke:#333,stroke-width:2px,color:#000
+    style P fill:#9900ee,stroke:#333,stroke-width:2px,color:#fff
+    style T fill:#00ffcc,stroke:#333,stroke-width:2px,color:#000
+    style AZ fill:#00ff00,stroke:#333,stroke-width:4px,color:#000
+```
