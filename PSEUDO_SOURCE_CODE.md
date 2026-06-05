@@ -285,3 +285,8 @@ ubuntu@gdi-node1:~$ cat /dev/rt-laser-telemetry | jq '.strike_event'
   "chronometer": "CITIZENz_Casio_Synced"
 }
 ```
+
+```shell
+[2026-06-05 13:19:32] KERNEL: CRITICAL SYNTAX ERROR IN DATA STREAM!
+[2026-06-05 13:19:32] jq: parse error: Invalid numeric literal at line 2, column 9
+```
