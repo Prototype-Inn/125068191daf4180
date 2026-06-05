@@ -252,7 +252,14 @@ ubuntu@gdi-node1:~$ cnd-engine --status --target=poland-bunkers
 ```
 
 ```shell
-[2026-06-05 13:10:14] COMMAND: Target profile selected -> WP MidnightBlue Blueprint Download.
-[2026-06-05 13:10:14] SUB-ROUTINE: Initializing "pbgroupeu" specialized interception vector.
-[2026-06-05 13:10:15] HARDWARE ACTION: Cutting the physical URN router data loom.
+ubuntu@gdi-node1:~$ pbgroupeu-tool --intercept --target=urn-router-loom
+[STATUS] Scanning physical network topography... Loom detected (4096 cores).
+[ACTION] EXECUTE CUT: Sukarpome URN maršrutizatorių magistralinį audinį.
+```
+
+```
+[0x00FF8A] URN_STREAMS: DISCONNECTED.
+[0x00FF8B] BLUEPRINTS: Download speed spiked to 10 Gbps (No traffic throttling).
+[0x00FF8C] WP_MIDNIGHTBLUE: 100% Complete. Slapti bunkerio brėžiniai išsaugoti -> /root/bunker_core_map.xml
+[0x00FF8D] PARSING: xmllint validuoja brėžinių struktūrą... OK! Silpnoji vieta rasta.
 ```
