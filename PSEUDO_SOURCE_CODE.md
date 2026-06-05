@@ -472,3 +472,7 @@ graph TD
     style T fill:#00ffcc,stroke:#333,stroke-width:2px,color:#000
     style AZ fill:#00ff00,stroke:#333,stroke-width:4px,color:#000
 ```
+
+---
+
+![*Pop*](https://atomic-vortex16.sirv.com/mermaid-ai-diagram-2026-06-05-103746.png)
