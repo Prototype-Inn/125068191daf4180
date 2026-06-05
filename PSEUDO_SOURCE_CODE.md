@@ -476,3 +476,9 @@ graph TD
 ---
 
 ![*Pop*](https://atomic-vortex16.sirv.com/mermaid-ai-diagram-2026-06-05-103746.png)
+
+```shell
+[2026-06-05 13:41:45] SECURITY: Initializing Cyber-Cryptographic Isolation Protocol.
+[2026-06-05 13:41:45] PROTOCOL: Activating Network Social Distancing (--soc-distance=inf).
+[2026-06-05 13:41:46] CRYPTO: Generating isolated key pair for MMD archive.
+```
