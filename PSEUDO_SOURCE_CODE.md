@@ -327,3 +327,85 @@ ubuntu@gdi-node1:~$ cat /dev/rt-laser-telemetry | jq '.'
   "message": "The cyber-bunker is ours. Sleep well, engineer."
 }
 ```
+
+---
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://xmlsoap.org"
+               xmlns:gdi="http://establishment.org"
+               xmlns:xsi="http://w3.org">
+    <soap:Header>
+        <gdi:TransactionHeader>
+            <gdi:MessageId>MSG-20260605-132712</gdi:MessageId>
+            <gdi:Timestamp>2026-06-05T13:27:12Z</gdi:Timestamp>
+            <gdi:ChronoBrand>CITIZENz-Casio-NTP</gdi:ChronoBrand>
+        </gdi:TransactionHeader>
+    </soap:Header>
+    <soap:Body>
+        <gdi:GetChronologyResponse>
+            <gdi:ChronologyReport>
+                <gdi:Status>VICTORY_CONFIRMED</gdi:Status>
+                <gdi:Timeline>
+                    
+                    <!-- FZ-01: Tunelio Persekiojimas -->
+                    <gdi:Event id="FZ-01">
+                        <gdi:Phase>TUNNEL_VISION_INIT</gdi:Phase>
+                        <gdi:Description>Vejasi Raudonieji – virtualūs Robocop faneros ir fondų patarėjai (Funds Advisory). Sukeliama Tunelinio matymo grėsmė. Tiberian Sun geriečiai atsiunčia ibase establishment gynybinį perimetrą.</gdi:Description>
+                        <gdi:Architecture>Vanilla Engine (Vala)</gdi:Architecture>
+                        <gdi:Variables>co-bound, embedded</gdi:Variables>
+                        <gdi:Security>Vortex Mutex status set to INITIALIZED</gdi:Security>
+                    </gdi:Event>
+
+                    <!-- FZ-02: Kodo Filtravimas -->
+                    <gdi:Event id="FZ-02">
+                        <gdi:Phase>DATA_FILTERING</gdi:Phase>
+                        <gdi:Description>Aktyvuojamas phpleague/fractals OpenAPI filtras. Kompiliavimas nukreipiamas per nelyginį branduolių skaičių ir šešioliktainį stebėjimą (-j3 observer -lHEX).</gdi:Description>
+                        <gdi:Architecture>SLED Unity SDK, HAL LAMP XML, SQL JSON INI</gdi:Architecture>
+                        <gdi:Metrics>EUR/USD/Juanis rinkų sumaištis</gdi:Metrics>
+                    </gdi:Event>
+
+                    <!-- FZ-03: Korporatyvinis Karas -->
+                    <gdi:Event id="FZ-03">
+                        <gdi:Phase>CORPORATE_DISRESEMBLE</gdi:Phase>
+                        <gdi:Description>Apple (Zend Framework) ir prototype.in susiremia su Google (Symfony MVC Disresemplifier Framework). Klasikinis MVC modelis išardomas, kad būtų sunaikinta atakos struktūra.</gdi:Description>
+                        <gdi:Status>Segmentation Fault (Core Dumped) perduodant srautą į Opel/Fiat/Renault konvojų</gdi:Status>
+                    </gdi:Event>
+
+                    <!-- FZ-04: Avarinis Atstatymas -->
+                    <gdi:Event id="FZ-04">
+                        <gdi:Phase>TRIVAGO_MERGER</gdi:Phase>
+                        <gdi:Description>Aktyvuojamas skubus Trivago!!! atminties kambarių sujungimo algoritmas. Sistemos išvalomos ir perkeliami resursai į mikroatominį realaus laiko (RT-PREEMPT) Ubuntu Server CLI (Noble Numbat) režimą.</gdi:Description>
+                        <gdi:Telemetry>Apsiribojama tik COMET Viewer ilgalaikių užklausų stebėjimu</gdi:Telemetry>
+                    </gdi:Event>
+
+                    <!-- FZ-05: Piratinė Transliacija -->
+                    <gdi:Event id="FZ-05">
+                        <gdi:Phase>ESM_PIRACY</gdi:Phase>
+                        <gdi:Description>Vykdomas sudo pro attach, deaktyvuojamas nematomatasis blobas ~/.streetz. Konvojus naudoja libvlc tube-converter YouTube/VEVOHQ HDMI/FHD nelegaliai transliacijai ir Lightshot screenshot maskuotei viešajame internete.</gdi:Description>
+                        <gdi:VisualMode>Perėjimas nuo ASM Hex prie HTML Hex pigments (#00FFCC)</gdi:VisualMode>
+                    </gdi:Event>
+
+                    <!-- FZ-06: Galutinis Smūgis Lenkijoje -->
+                    <gdi:Event id="FZ-06">
+                        <gdi:Phase>BUNKER_OBLITERATION</gdi:Phase>
+                        <gdi:Description>Konvojus virsta šarvuotais Pentagon clone lazeriniais Panzeriais. Pasiekiami slapti Ribbentrop/Molotov pakto bunkeriai Lenkijoje. pbgroup.eu specialusis būrys perkerpa URN maršrutizatorių duomenų kabelių pynę (loom).</gdi:Description>
+                        <gdi:Framework>Oracle Full Stack (Open{JDK/JRE/JVM}) ir SF/ZF Merger MVC DoJo MVP</gdi:Framework>
+                    </gdi:Event>
+
+                    <!-- FZ-07: Sintaksės Krizė ir Triumfas -->
+                    <gdi:Event id="FZ-07">
+                        <gdi:Phase>JSON_PARADOX</gdi:Phase>
+                        <gdi:Description>Atsisakoma ASM, pereinama prie JSON ir jq binary. Įvyksta jq parse error (Invalid numeric literal at line 2, column 9) dėl Hex reikšmės formato. Klaida ištaisoma realiu laiku per sed/Lua skriptus.</gdi:Description>
+                        <gdi:Result>Visiškas globalus PHP rinkos throwbackas pbgroup.eu metiniame saite. Stoking Stray ir Resolute Raccoon laiko linijos stabilizuotos.</gdi:Result>
+                    </gdi:Event>
+                    
+                </gdi:Timeline>
+                <gdi:FinalPayload xsi:type="gdi:HexStream">
+                    0x4744495f45535441424c4953484d454e545f53414645
+                </gdi:FinalPayload>
+            </gdi:ChronologyReport>
+        </gdi:GetChronologyResponse>
+    </soap:Body>
+</soap:Envelope>
+```
