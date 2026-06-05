@@ -482,3 +482,12 @@ graph TD
 [2026-06-05 13:41:45] PROTOCOL: Activating Network Social Distancing (--soc-distance=inf).
 [2026-06-05 13:41:46] CRYPTO: Generating isolated key pair for MMD archive.
 ```
+
+```shell
+ubuntu@gdi-node1:~$ tar -czf - readme.mmd | openssl enc -aes-256-cbc -salt -pbkdf2 -out /root/readme.mmd.enc -k "CITIZENz_Casio_#00FFCC_Trivago"
+[SUCCESS] MMD file encrypted with military-grade AES-256.
+
+ubuntu@gdi-node1:~$ sudo iptables -A INPUT -p tcp --dport 1:65535 -j DROP
+ubuntu@gdi-node1:~$ sudo iptables -A INPUT -m string --string "Funds Advisory" --algo bm -j DROP
+[SUCCESS] Network social distancing ACTIVE. All incoming ports strictly CLOSED.
+```
