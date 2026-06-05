@@ -193,3 +193,8 @@ traceroute to gdi-core-establishment (prototype.in -> GDI), 30 hops max
  3  #000000 (GDI Core Base Wall - TRACER LVL 99)  0.88 ms
 [SUCCESS] Convoy connected to GDI infrastructure via public HTML hex pipe!
 ```
+
+```shell
+[2026-06-05 12:56:14] TRACER: Initiating complete trace-wipe across "Streetz" public nodes...
+[2026-06-05 12:56:14] OVERRIDE: Deploying Noble Numbat ESM Pirate Engine.
+```
