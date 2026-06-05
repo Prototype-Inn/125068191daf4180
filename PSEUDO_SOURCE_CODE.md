@@ -118,3 +118,11 @@ class AntiMvcController
 [2026-06-05 12:37:05] SOS_GDI_API: Ion Cannon coordinates synchronized. Defense stable.
 [2026-06-05 12:37:05] RESPONSE STATUS: 200 OK [HexStreamResponse] -> 0x46554e44535f41445649534f52595f4e45555452414c495a4544
 ```
+
+---
+
+```shell
+[2026-06-05 12:41:12] KERNEL: PANIC! segmentation fault (core dumped)
+```
+
+---
