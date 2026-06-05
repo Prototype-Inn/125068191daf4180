@@ -269,3 +269,19 @@ ubuntu@gdi-node1:~$ pbgroupeu-tool --intercept --target=urn-router-loom
 [2026-06-05 13:15:22] BINARY_SWITCH: jq promoted to PRIMARY // xmllint demoted to BACKUP.
 [2026-06-05 13:15:23] CODEBASE: Purging ASM -> Compiling Lua/Vala/C-Embedded Core.
 ```
+
+```shell
+ubuntu@gdi-node1:~$ cat /dev/rt-laser-telemetry | jq '.strike_event'
+{
+  "weapon": "Laser Panzer Atomic Framework",
+  "engine_bindings": ["Lua", "Vala", "C-embedded"],
+  "target_coordinates": {
+    "bunker": "Poland_Ribbentrop_Molotov_Core",
+    "weakness": "JVM_Cooling_Shaft"
+  },
+  "laser_intensity_hex": "#00FFCC",
+  "status": "TOTAL_OBLITERATION",
+  "bunker_disarray_index": 0.99,
+  "chronometer": "CITIZENz_Casio_Synced"
+}
+```
