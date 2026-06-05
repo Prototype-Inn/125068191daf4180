@@ -295,3 +295,11 @@ ubuntu@gdi-node1:~$ cat /dev/rt-laser-telemetry | jq '.strike_event'
 ubuntu@gdi-node1:~$ sed -i '2s/\([0-9a-fA-F]\{2,\}\)/"\1"/' /dev/rt-laser-telemetry
 ubuntu@gdi-node1:~$ cat /dev/rt-laser-telemetry | jq '.'
 ```
+
+```json
+{
+  "laser_intensity_hex": "#00FFCC",
+  "status": "OBLITERATION_RESUMED",
+  "engine_state": "STABLE"
+}
+```
