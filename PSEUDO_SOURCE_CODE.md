@@ -198,3 +198,7 @@ traceroute to gdi-core-establishment (prototype.in -> GDI), 30 hops max
 [2026-06-05 12:56:14] TRACER: Initiating complete trace-wipe across "Streetz" public nodes...
 [2026-06-05 12:56:14] OVERRIDE: Deploying Noble Numbat ESM Pirate Engine.
 ```
+
+```shell
+ubuntu@gdi-node1:~$ sudo pro attach --production-pirate-key=ESM-NOBLE-NUMBAT-99X
+```
