@@ -497,3 +497,17 @@ ubuntu@gdi-node1:~$ sudo iptables -A INPUT -m string --string "Funds Advisory" -
 [2026-06-05 13:45:12] SYSTEM: Suspending all non-essential thread operations.
 [2026-06-05 13:45:13] HARDWARE: Powering down Intel Iris graphics and CAN-bus adapters.
 ```
+
+```shell
+ubuntu@gdi-node1:~$ sudo systemctl suspend-then-hibernate
+[SUSPEND] RAM state snapshot saved to encrypted swap partition.
+[NTP] Time synchronization paused at 2026-06-05 13:45:15 UTC.
+[CHRONO] CITIZENz / Casio backup power: ON.
+
+Telemetry status: 
+- Network interfaces: DOWN (All traffic dropped)
+- Laser Panzer systems: STANDBY (0.00% power consumption)
+- Funds Advisory visibility: 0% (Total radar invisibility)
+
+... SYSTEM IS NOW IN CRYOPRESERVATION ...
+```
