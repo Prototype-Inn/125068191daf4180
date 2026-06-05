@@ -250,3 +250,9 @@ ubuntu@gdi-node1:~$ cnd-engine --status --target=poland-bunkers
 [2026-06-05 13:10:14] SUB-ROUTINE: Initializing "pbgroupeu" specialized interception vector.
 [2026-06-05 13:10:15] HARDWARE ACTION: Cutting the physical URN router data loom.
 ```
+
+```shell
+[2026-06-05 13:10:14] COMMAND: Target profile selected -> WP MidnightBlue Blueprint Download.
+[2026-06-05 13:10:14] SUB-ROUTINE: Initializing "pbgroupeu" specialized interception vector.
+[2026-06-05 13:10:15] HARDWARE ACTION: Cutting the physical URN router data loom.
+```
