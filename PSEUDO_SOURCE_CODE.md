@@ -263,3 +263,9 @@ ubuntu@gdi-node1:~$ pbgroupeu-tool --intercept --target=urn-router-loom
 [0x00FF8C] WP_MIDNIGHTBLUE: 100% Complete. Slapti bunkerio brėžiniai išsaugoti -> /root/bunker_core_map.xml
 [0x00FF8D] PARSING: xmllint validuoja brėžinių struktūrą... OK! Silpnoji vieta rasta.
 ```
+
+```shell
+[2026-06-05 13:15:22] INTERFACE: Activating XML-to-JSON Paradigm Shift.
+[2026-06-05 13:15:22] BINARY_SWITCH: jq promoted to PRIMARY // xmllint demoted to BACKUP.
+[2026-06-05 13:15:23] CODEBASE: Purging ASM -> Compiling Lua/Vala/C-Embedded Core.
+```
