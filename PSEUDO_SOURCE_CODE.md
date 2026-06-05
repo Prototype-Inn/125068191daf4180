@@ -157,3 +157,9 @@ ubuntu@gdi-establishment-node1:~$ systemctl status trivago-merger.service
      CGroup: /system.slice/trivago-merger.service
              └─4012 /usr/bin/trivago-engine --mode=cli-hardened -lHEX
 ```
+
+```shell
+[2026-06-05 12:48:22] RT-KERNEL: COMET Subsystem Override Activated.
+[2026-06-05 12:48:22] CLI-MODE: Dropping all peripheral multi-dimensional calculations.
+[2026-06-05 12:48:22] SUBSYSTEM: Limiting telemetry focus strictly to the COMET viewer.
+```
