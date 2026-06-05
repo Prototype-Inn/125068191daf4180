@@ -491,3 +491,9 @@ ubuntu@gdi-node1:~$ sudo iptables -A INPUT -p tcp --dport 1:65535 -j DROP
 ubuntu@gdi-node1:~$ sudo iptables -A INPUT -m string --string "Funds Advisory" --algo bm -j DROP
 [SUCCESS] Network social distancing ACTIVE. All incoming ports strictly CLOSED.
 ```
+
+```shell
+[2026-06-05 13:45:12] COMMAND: Initiating deep sleep sequence (--mode=cryo-isolated).
+[2026-06-05 13:45:12] SYSTEM: Suspending all non-essential thread operations.
+[2026-06-05 13:45:13] HARDWARE: Powering down Intel Iris graphics and CAN-bus adapters.
+```
