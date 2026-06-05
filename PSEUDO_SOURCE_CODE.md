@@ -290,3 +290,8 @@ ubuntu@gdi-node1:~$ cat /dev/rt-laser-telemetry | jq '.strike_event'
 [2026-06-05 13:19:32] KERNEL: CRITICAL SYNTAX ERROR IN DATA STREAM!
 [2026-06-05 13:19:32] jq: parse error: Invalid numeric literal at line 2, column 9
 ```
+
+```shell
+ubuntu@gdi-node1:~$ sed -i '2s/\([0-9a-fA-F]\{2,\}\)/"\1"/' /dev/rt-laser-telemetry
+ubuntu@gdi-node1:~$ cat /dev/rt-laser-telemetry | jq '.'
+```
