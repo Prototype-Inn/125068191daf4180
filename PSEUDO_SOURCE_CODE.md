@@ -96,3 +96,10 @@ class AntiMvcController
     }
 }
 ```
+
+```shell
+[2026-06-05 12:37:01] INFRASTRUCTURE: SLED Unity SDK initialized. HAL LAMP XML boundaries verified.
+[2026-06-05 12:37:02] ALERT: Red Alert RHEL Engine detected massive incoming EUR/USD/Yuan bot injection.
+[2026-06-05 12:37:02] ATTACK: Red-Bot-04921 trying to flood endpoint: /api/v1/disresembler/anti-mvc
+[2026-06-05 12:37:02] THREAT: Tunnel Vision state triggered. Currency bot payload size: 4.2TB/s (Fractal Entropy).
+```
