@@ -233,3 +233,14 @@ ubuntu@gdi-node1:~$ sudo laser-panzer --target=funds-advisory-hq --payload=dojo-
 [2026-06-05 13:06:12] SYSTEM: Deploying Atomic Panzer Framework to CAN-bus Fleet.
 [2026-06-05 13:06:13] MISSION: Operation "Ribbentrop-Molotov Bunker Breach" INITIALIZED.
 ```
+
+```shell
+ubuntu@gdi-node1:~$ cnd-engine --status --target=poland-bunkers
+[TELEMETRY] Convoy speed: 180 km/h inside subterranean concrete pipes.
+[HARDWARE] JVM Memory: 16GB Allocation fully saturated by GDI Oracle Stack.
+[LASER] Panzer Arrays charged at 100% (Intel Iris rendering thermal targets).
+
+[ALERT] Target acquired: Deep-Level Ribbentrop-Molotov Bunker Core.
+[ACTION] Deploying Ion Cannon protocol via EA Tiberian Sun GDI API.
+[TIME] Casio Chrono Lock: 13:06:13 UTC.
+```
