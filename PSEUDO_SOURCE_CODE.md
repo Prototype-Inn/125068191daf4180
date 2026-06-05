@@ -142,3 +142,18 @@ class AntiMvcController
 [2026-06-05 12:46:12] KERNEL: Initializing Micro-Atomic RT-Patch Core...
 [2026-06-05 12:46:12] SYSTEM: Switching from SLED to Ubuntu Server CLI Mode (Minimal Dev Environment)
 ```
+
+```shell
+ubuntu@gdi-establishment-node1:~$ uname -a
+Linux gdi-node1 6.12.0-rt-micro-atomic #1 SMP PREEMPT_RT Fri Jun 5 12:46:12 EET 2026 x86_64 x86_64 GNU/Linux
+
+ubuntu@gdi-establishment-node1:~$ systemctl status trivago-merger.service
+● trivago-merger.service - Trivago Real-Time Cluster Core
+     Loaded: loaded (/etc/systemd/system/trivago-merger.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2026-06-05 12:46:12 EET; 2s ago
+   Main PID: 4012 (trivago-engine)
+      Tasks: 3 (limit: nelyginis branduolių observer active on Core #3)
+     Memory: 14.2M (Core Dump completely flushed)
+     CGroup: /system.slice/trivago-merger.service
+             └─4012 /usr/bin/trivago-engine --mode=cli-hardened -lHEX
+```
