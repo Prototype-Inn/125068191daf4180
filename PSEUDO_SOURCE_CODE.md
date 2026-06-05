@@ -409,3 +409,16 @@ ubuntu@gdi-node1:~$ cat /dev/rt-laser-telemetry | jq '.'
     </soap:Body>
 </soap:Envelope>
 ```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://xmlsoap.org"
+               xmlns:gdi="http://establishment.org">
+    <soap:Body>
+        <gdi:FormatConversionRequest>
+            <gdi:TargetFormat>MMD</gdi:TargetFormat>
+            <gdi:Status>CONVERTING_SOAP_TO_MERMAID_MARKDOWN</gdi:Status>
+        </gdi:FormatConversionRequest>
+    </soap:Body>
+</soap:Envelope>
+```
