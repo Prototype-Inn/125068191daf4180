@@ -184,3 +184,12 @@ ubuntu@gdi-establishment-node1:~$ comet-view --stream --core=3 --format=hex
 [2026-06-05 12:52:14] TRANSITION: ASM Hex (0x001A) -> HTML Hex Pigments (#FF0000)
 [2026-06-05 12:52:15] BROADCAST: Public Web Tracer Mode Engaged.
 ```
+
+```shell
+ubuntu@gdi-establishment-node1:~$ traceroute --html-hex-mode gdi-core-establishment
+traceroute to gdi-core-establishment (prototype.in -> GDI), 30 hops max
+ 1  #00FFCC (Local Convoy Gateway)  0.12 ms
+ 2  #FF3333 (Disarray Net / Lightshot-Proxy)  1.45 ms
+ 3  #000000 (GDI Core Base Wall - TRACER LVL 99)  0.88 ms
+[SUCCESS] Convoy connected to GDI infrastructure via public HTML hex pipe!
+```
