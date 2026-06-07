@@ -75,3 +75,9 @@ self.addEventListener('fetch', (event) => {
       })
   );
 });
+
+// !?
+// Pavyzdys, kaip service-worker.js grąžina šį failą API užklausoms:
+if (event.request.url.includes('/api/ai/')) {
+  return caches.match('/offline-fallback.json');
+}
