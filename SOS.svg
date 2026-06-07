@@ -1,118 +1,124 @@
 <svg xmlns="http://w3.org" viewBox="0 0 900 900" width="100%" height="100%">
   <defs>
-    <!-- Gist ir švaraus terminalo tamsus kosminis fonas -->
-    <radialGradient id="tech-bg" cx="50%" cy="50%" r="75%">
-      <stop offset="0%" stop-color="#14151a"/>
-      <stop offset="60%" stop-color="#0b0c10"/>
-      <stop offset="100%" stop-color="#020205"/>
+    <!-- Gist ir terminalo kosminis fonas -->
+    <radialGradient id="cyber-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#18111b"/>
+      <stop offset="60%" stop-color="#09050d"/>
+      <stop offset="100%" stop-color="#020004"/>
     </radialGradient>
 
-    <!-- Neoninis švytėjimas aktyviems elementams -->
-    <filter id="core-glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="15" result="blur" />
+    <!-- Super-švytėjimas Ubuntu branduoliui (E-Star) -->
+    <filter id="estar-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <filter id="active-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
+    <filter id="node-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <!-- NeoVim žalios spalvos gradientas -->
-    <linearGradient id="neovim-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#22cc66"/>
-      <stop offset="100%" stop-color="#006622"/>
+    <!-- Oficialūs sisteminiai gradientai -->
+    <linearGradient id="ubuntu-core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9d5c"/>
+      <stop offset="50%" stop-color="#e95420"/>
+      <stop offset="100%" stop-color="#aea110"/> <!-- E-Star auksinis atspalvis -->
     </linearGradient>
 
-    <!-- Ubuntu oficialus oranžinis gradientas -->
-    <linearGradient id="ubuntu-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff8d42"/>
-      <stop offset="100%" stop-color="#e95420"/>
+    <linearGradient id="neovim-green" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2de377"/>
+      <stop offset="100%" stop-color="#008833"/>
     </linearGradient>
 
-    <!-- Gemini / AI melsvas gradientas -->
-    <linearGradient id="ai-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="ai-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#4fc3f7"/>
       <stop offset="100%" stop-color="#0288d1"/>
     </linearGradient>
 
-    <!-- daily.dev ugninis gradientas -->
     <linearGradient id="daily-fire" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ff5252"/>
       <stop offset="100%" stop-color="#ff7a00"/>
     </linearGradient>
   </defs>
 
-  <!-- Fonas -->
-  <rect width="900" height="900" fill="url(#tech-bg)"/>
+  <!-- 1. FONAS -->
+  <rect width="900" height="900" fill="url(#cyber-bg)"/>
 
-  <!-- 1. PASYVŪS ELEMENTAI (Nenaudojami Gist įrankiai) -->
-  <g opacity="0.08" fill="#ffffff">
-    <circle cx="200" cy="150" r="6" />
-    <circle cx="720" cy="180" r="5" />
-    <ellipse cx="450" cy="450" rx="430" ry="190" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 10"/>
-  </g>
-
-  <!-- 2. KVANTAINĖS ORBITOS (Dedamųjų traukos laukai) -->
-  <g stroke-width="2" fill="none" opacity="0.4">
-    <!-- Horizontalioji daily.dev orbita -->
-    <ellipse cx="450" cy="450" rx="350" ry="110" stroke="url(#daily-fire)" stroke-dasharray="12 6"/>
-    <!-- Įstriža Gemini AI orbita -->
-    <ellipse cx="450" cy="450" rx="370" ry="120" stroke="url(#ai-blue)" transform="rotate(35 450 450)"/>
-    <!-- Įstriža Codex orbita -->
-    <ellipse cx="450" cy="450" rx="370" ry="120" stroke="#ffffff" transform="rotate(-35 450 450)"/>
-  </g>
-
-  <!-- 3. GRYNAS TECHNOLOGINIS BRANDUOLYS (Ubuntu + NeoVim integracija) -->
-  <g transform="translate(450, 450)" filter="url(#core-glow)">
-    <!-- Išorinis Ubuntu žiedas -->
-    <circle cx="0" cy="0" r="110" fill="none" stroke="url(#ubuntu-gradient)" stroke-width="14"/>
+  <!-- 2. KODO IR TERMINALO TEKSTŪRA (Matrix / Gist Texture) -->
+  <g fill="#2de377" font-family="monospace" font-size="11" opacity="0.12" letter-spacing="2">
+    <!-- Vertikalios kodo sekcijos iš jūsų Gist logikos -->
+    <text x="40" y="80">PROTOTYPE: PHP_ZTS_ENABLED=1</text>
+    <text x="40" y="100">01001100 01001111 01001100</text>
+    <text x="40" y="120">CPU_MASK=0x8 [AUDIT_CORE]</text>
+    <text x="40" y="140">QUIC_HTTP3_PORT=443</text>
     
-    <!-- Ubuntu „Circle of Friends“ tarpai ir mazgai -->
-    <!-- Mazgai (Protonai) -->
-    <circle cx="0" cy="-110" r="16" fill="#ffffff"/>
-    <circle cx="95" cy="55" r="16" fill="#ffffff"/>
-    <circle cx="-95" cy="55" r="16" fill="#ffffff"/>
-    <!-- Išpjovos žiede -->
-    <path d="M 0,-85 L 0,-135" stroke="#14151a" stroke-width="10"/>
-    <path d="M 73,42 L 117,68" stroke="#14151a" stroke-width="10"/>
-    <path d="M -73,42 L -117,68" stroke="#14151a" stroke-width="10"/>
+    <text x="680" y="80">daily.dev >> FETCH</text>
+    <text x="680" y="100">AI_MODELS [GEMINI, CODEX]</text>
+    <text x="680" y="120">APP_ARMOR=ENFORCED</text>
+    <text x="680" y="140">PWA_W3C_SHIELD</text>
 
-    <!-- Centrinė dalis: NeoVim „N“ logotipas kaip branduolio šerdis -->
-    <g transform="scale(1.2) translate(-32, -37)">
-      <!-- Kairysis NeoVim sparnas -->
-      <path d="M0,10 L20,0 L20,65 L0,75 Z" fill="url(#neovim-gradient)" opacity="0.85"/>
-      <!-- Dešinysis NeoVim sparnas -->
-      <path d="M45,0 L65,10 L65,75 L45,65 Z" fill="url(#neovim-gradient)"/>
-      <!-- Įstrižoji jungianti briauna -->
-      <path d="M20,0 L45,65 L45,65 L20,15 Z" fill="#ffffff" opacity="0.95"/>
+    <text x="40" y="780">CISO_REPORT -> VDAI</text>
+    <text x="40" y="800">SESSION_CACHE_FLUSH=TRUE</text>
+    <text x="40" y="820">RADICAL_TRANSPARENCY_GS</text>
+
+    <text x="660" y="780">NEOVIM_VIMRC_LOADED</text>
+    <text x="660" y="800">REDIS_RATELIMIT=ACTIVE</text>
+    <text x="660" y="820">SYS_ORCHESTRATION_OK</text>
+  </g>
+
+  <!-- 3. KVANTAINĖS ORBITOS -->
+  <g stroke-width="1.5" fill="none" opacity="0.3">
+    <ellipse cx="450" cy="450" rx="360" ry="110" stroke="url(#daily-fire)" stroke-dasharray="10 5"/>
+    <ellipse cx="450" cy="450" rx="380" ry="130" stroke="url(#ai-cyan)" transform="rotate(30 450 450)"/>
+    <ellipse cx="450" cy="450" rx="380" ry="130" stroke="#ffffff" transform="rotate(-30 450 450)"/>
+  </g>
+
+  <!-- 4. DOMINUOJANTIS UBUNTU BRANDUOLYS (E-STAR) -->
+  <g transform="translate(450, 450)" filter="url(#estar-glow)">
+    <!-- Dominuojanti Ubuntu atominė masė -->
+    <circle cx="0" cy="0" r="140" fill="none" stroke="url(#ubuntu-core)" stroke-width="20"/>
+    
+    <!-- E-Star (Ubuntu draugų rato mazgai / protonai) -->
+    <circle cx="0" cy="-140" r="22" fill="#ffffff"/>
+    <circle cx="121" cy="70" r="22" fill="#ffffff"/>
+    <circle cx="-121" cy="70" r="22" fill="#ffffff"/>
+    
+    <!-- Atominės išpjovos žiede -->
+    <path d="M 0,-105 L 0,-175" stroke="#18111b" stroke-width="14"/>
+    <path d="M 91,53 L 151,87" stroke="#18111b" stroke-width="14"/>
+    <path d="M -91,53 L -151,87" stroke="#18111b" stroke-width="14"/>
+
+    <!-- Subtili NeoVim integracija pačiame žvaigždės centre -->
+    <g transform="scale(0.9) translate(-32, -37)" opacity="0.95">
+      <path d="M0,10 L20,0 L20,65 L0,75 Z" fill="url(#neovim-green)"/>
+      <path d="M45,0 L65,10 L65,75 L45,65 Z" fill="url(#neovim-green)"/>
+      <path d="M20,0 L45,65 L45,65 L20,15 Z" fill="#ffffff"/>
     </g>
   </g>
 
-  <!-- 4. ELEKTRONAI (Nepriklausomos judančios dedamosios) -->
+  <!-- 5. INDEPENDENT ELEKTRONAI (Išoriniai Gist įrankiai) -->
 
-  <!-- ELEKTRONAS A: daily.dev (Ugninis technologijų srautas) -->
-  <g transform="translate(800, 450)" filter="url(#active-glow)">
+  <!-- daily.dev elektronas -->
+  <g transform="translate(810, 450)" filter="url(#node-glow)">
     <circle cx="0" cy="0" r="32" fill="url(#daily-fire)"/>
-    <path d="M -8,12 L -8,-12 Q 8,-12 8,0 Q 8,12 -8,12 Z" fill="none" stroke="#ffffff" stroke-width="4.5"/>
+    <path d="M -8,12 L -8,-12 Q 8,-12 8,0 Q 8,12 -8,12 Z" fill="none" stroke="#ffffff" stroke-width="4"/>
     <circle cx="0" cy="0" r="5" fill="#ffffff"/>
   </g>
 
-  <!-- ELEKTRONAS B: Gemini AI (Kvantinis modelis) -->
-  <g transform="translate(753, 237)" filter="url(#active-glow)">
-    <circle cx="0" cy="0" r="28" fill="url(#ai-blue)"/>
+  <!-- Gemini AI elektronas -->
+  <g transform="translate(760, 240)" filter="url(#node-glow)">
+    <circle cx="0" cy="0" r="28" fill="url(#ai-cyan)"/>
     <path d="M 0,-16 Q 0,0 16,0 Q 0,0 0,16 Q 0,0 -16,0 Q 0,0 0,-16 Z" fill="#ffffff"/>
   </g>
 
-  <!-- ELEKTRONAS C: Codex (Sintaksės analizatorius) -->
-  <g transform="translate(147, 237)">
-    <circle cx="0" cy="0" r="28" fill="#1c1d22" stroke="#ffffff" stroke-width="2.5"/>
-    <path d="M -9,-7 L -16,0 L -9,7 M 9,-7 L 16,0 L 9,7 M -2,10 L 3,-10" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Codex elektronas -->
+  <g transform="translate(140, 240)">
+    <circle cx="0" cy="0" r="28" fill="#15101a" stroke="#ffffff" stroke-width="2"/>
+    <path d="M -9,-7 L -16,0 L -9,7 M 9,-7 L 16,0 L 9,7 M -2,10 L 3,-10" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
   </g>
 
-  <!-- Kvantiniai ryšio mazgai terminalo erdvėje -->
-  <circle cx="450" cy="140" r="3" fill="#22cc66" opacity="0.7"/>
-  <circle cx="280" cy="740" r="4" fill="#4fc3f7" opacity="0.5"/>
-  <circle cx="620" cy="730" r="3" fill="#ff5252" opacity="0.6"/>
+  <!-- Kvantiniai spinduliai, jungiantys tekstūrą su E-Star -->
+  <line x1="450" y1="200" x2="450" y2="270" stroke="#2de377" stroke-width="2" opacity="0.3" stroke-dasharray="5 5"/>
+  <line x1="230" y1="680" x2="310" y2="600" stroke="#ff5252" stroke-width="2" opacity="0.3" stroke-dasharray="5 5"/>
 </svg>
 
