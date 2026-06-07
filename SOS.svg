@@ -1,51 +1,118 @@
-<svg xmlns="http://w3.org" viewBox="0 0 256 256" width="100%" height="auto">
+<svg xmlns="http://w3.org" viewBox="0 0 900 900" width="100%" height="100%">
   <defs>
-    <!-- Griežtas COSMIC / Rust tamsusis fonas su neoniniu Pop!_OS Teal švytėjimu -->
-    <linearGradient id="nexusGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#7000FF" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#E95420" stop-opacity="0.8"/>
+    <!-- Gist ir švaraus terminalo tamsus kosminis fonas -->
+    <radialGradient id="tech-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#14151a"/>
+      <stop offset="60%" stop-color="#0b0c10"/>
+      <stop offset="100%" stop-color="#020205"/>
+    </radialGradient>
+
+    <!-- Neoninis švytėjimas aktyviems elementams -->
+    <filter id="core-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="active-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- NeoVim žalios spalvos gradientas -->
+    <linearGradient id="neovim-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22cc66"/>
+      <stop offset="100%" stop-color="#006622"/>
     </linearGradient>
-    <style>
-      .nexus-bg { fill: #111116; stroke: #222230; stroke-width: 3; }
-      .outer-nexus { fill: none; stroke: url(#nexusGlow); stroke-width: 5; stroke-linecap: round; }
-      .stylus-unit { fill: none; stroke: #FFFFFF; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-      .screen-grid { fill: none; stroke: #313143; stroke-width: 1; stroke-dasharray: 4 4; opacity: 0.5; }
-      .core-node { stroke-width: 2; }
-      .txt-title { fill: #FFFFFF; font-family: sans-serif; font-size: 11px; font-weight: bold; letter-spacing: 1.5px; }
-      .txt-code { fill: #A5ADCB; font-family: 'Courier New', monospace; font-size: 9px; font-weight: bold; }
-    </style>
+
+    <!-- Ubuntu oficialus oranžinis gradientas -->
+    <linearGradient id="ubuntu-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8d42"/>
+      <stop offset="100%" stop-color="#e95420"/>
+    </linearGradient>
+
+    <!-- Gemini / AI melsvas gradientas -->
+    <linearGradient id="ai-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4fc3f7"/>
+      <stop offset="100%" stop-color="#0288d1"/>
+    </linearGradient>
+
+    <!-- daily.dev ugninis gradientas -->
+    <linearGradient id="daily-fire" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5252"/>
+      <stop offset="100%" stop-color="#ff7a00"/>
+    </linearGradient>
   </defs>
 
-  <!-- 1. Pagrindinis įrenginio korpusas (Matinis anglies kvadratas) -->
-  <rect width="248" height="248" x="4" y="4" rx="36" class="nexus-bg"/>
-  
-  <!-- 2. Mobiliojo ekrano tinklelis (Nexus Mobile UX) -->
-  <path d="M40 40 H216 V216 H40 Z" class="screen-grid"/>
-  <line x1="128" y1="40" x2="128" y2="216" class="screen-grid"/>
-  <line x1="40" y1="128" x2="216" y2="128" class="screen-grid"/>
+  <!-- Fonas -->
+  <rect width="900" height="900" fill="url(#tech-bg)"/>
 
-  <!-- 3. Nexus Išorinis Karkasas (5 konvergencijos taškai aplink perimetrą) -->
-  <path d="M50 70 L128 35 L206 70 V160 L128 220 L50 160 Z" class="outer-nexus"/>
+  <!-- 1. PASYVŪS ELEMENTAI (Nenaudojami Gist įrankiai) -->
+  <g opacity="0.08" fill="#ffffff">
+    <circle cx="200" cy="150" r="6" />
+    <circle cx="720" cy="180" r="5" />
+    <ellipse cx="450" cy="450" rx="430" ry="190" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 10"/>
+  </g>
 
-  <!-- 4. Integruotas Stylus įvesties elementas (Kertantis vektorius per visą karkasą) -->
-  <path d="M70 190 L170 90 M170 90 L160 80 M170 90 L180 100" class="stylus-unit"/>
-  <circle cx="65" cy="195" r="4" fill="#00F0FF" /> <!-- Stylus aktyvavimo taškas -->
+  <!-- 2. KVANTAINĖS ORBITOS (Dedamųjų traukos laukai) -->
+  <g stroke-width="2" fill="none" opacity="0.4">
+    <!-- Horizontalioji daily.dev orbita -->
+    <ellipse cx="450" cy="450" rx="350" ry="110" stroke="url(#daily-fire)" stroke-dasharray="12 6"/>
+    <!-- Įstriža Gemini AI orbita -->
+    <ellipse cx="450" cy="450" rx="370" ry="120" stroke="url(#ai-blue)" transform="rotate(35 450 450)"/>
+    <!-- Įstriža Codex orbita -->
+    <ellipse cx="450" cy="450" rx="370" ry="120" stroke="#ffffff" transform="rotate(-35 450 450)"/>
+  </g>
 
-  <!-- 5. 5 Konvergencijos mazgai (C-Suite + Ubuntu + Idol Hibridai) -->
-  <!-- Mazgas 1: Povilas & Cho (Kylin Oranžinė) -->
-  <circle cx="128" cy="35" r="7" fill="#E95420" class="core-node" stroke="#FFFFFF"/>
-  <!-- Mazgas 2: daemon & Camila (Lubuntu Mėlyna) -->
-  <circle cx="206" cy="70" r="7" fill="#36A2EB" class="core-node" stroke="#FFFFFF"/>
-  <!-- Mazgas 3: Vytis & Leecho (Xubuntu Gelsva) -->
-  <circle cx="206" cy="160" r="7" fill="#FFB900" class="core-node" stroke="#FFFFFF"/>
-  <!-- Mazgas 4: adm & Lauren (Kubuntu Žalia) -->
-  <circle cx="128" cy="220" r="7" fill="#87A96B" class="core-node" stroke="#FFFFFF"/>
-  <!-- Mazgas 5: Gintaras & Liz (Budgie Šviesiai Mėlyna) -->
-  <circle cx="50" cy="115" r="7" fill="#00F0FF" class="core-node" stroke="#FFFFFF"/>
+  <!-- 3. GRYNAS TECHNOLOGINIS BRANDUOLYS (Ubuntu + NeoVim integracija) -->
+  <g transform="translate(450, 450)" filter="url(#core-glow)">
+    <!-- Išorinis Ubuntu žiedas -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="url(#ubuntu-gradient)" stroke-width="14"/>
+    
+    <!-- Ubuntu „Circle of Friends“ tarpai ir mazgai -->
+    <!-- Mazgai (Protonai) -->
+    <circle cx="0" cy="-110" r="16" fill="#ffffff"/>
+    <circle cx="95" cy="55" r="16" fill="#ffffff"/>
+    <circle cx="-95" cy="55" r="16" fill="#ffffff"/>
+    <!-- Išpjovos žiede -->
+    <path d="M 0,-85 L 0,-135" stroke="#14151a" stroke-width="10"/>
+    <path d="M 73,42 L 117,68" stroke="#14151a" stroke-width="10"/>
+    <path d="M -73,42 L -117,68" stroke="#14151a" stroke-width="10"/>
 
-  <!-- 6. Įrenginio identifikavimo tekstas (ICO Metrika) -->
-  <text x="128" y="238" text-anchor="middle" class="txt-title">NEXUS MOBILE UNIT</text>
-  <text x="128" y="20" text-anchor="middle" class="txt-code">STYLUS // ICO_v5.0_GOT!!!</text>
+    <!-- Centrinė dalis: NeoVim „N“ logotipas kaip branduolio šerdis -->
+    <g transform="scale(1.2) translate(-32, -37)">
+      <!-- Kairysis NeoVim sparnas -->
+      <path d="M0,10 L20,0 L20,65 L0,75 Z" fill="url(#neovim-gradient)" opacity="0.85"/>
+      <!-- Dešinysis NeoVim sparnas -->
+      <path d="M45,0 L65,10 L65,75 L45,65 Z" fill="url(#neovim-gradient)"/>
+      <!-- Įstrižoji jungianti briauna -->
+      <path d="M20,0 L45,65 L45,65 L20,15 Z" fill="#ffffff" opacity="0.95"/>
+    </g>
+  </g>
+
+  <!-- 4. ELEKTRONAI (Nepriklausomos judančios dedamosios) -->
+
+  <!-- ELEKTRONAS A: daily.dev (Ugninis technologijų srautas) -->
+  <g transform="translate(800, 450)" filter="url(#active-glow)">
+    <circle cx="0" cy="0" r="32" fill="url(#daily-fire)"/>
+    <path d="M -8,12 L -8,-12 Q 8,-12 8,0 Q 8,12 -8,12 Z" fill="none" stroke="#ffffff" stroke-width="4.5"/>
+    <circle cx="0" cy="0" r="5" fill="#ffffff"/>
+  </g>
+
+  <!-- ELEKTRONAS B: Gemini AI (Kvantinis modelis) -->
+  <g transform="translate(753, 237)" filter="url(#active-glow)">
+    <circle cx="0" cy="0" r="28" fill="url(#ai-blue)"/>
+    <path d="M 0,-16 Q 0,0 16,0 Q 0,0 0,16 Q 0,0 -16,0 Q 0,0 0,-16 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- ELEKTRONAS C: Codex (Sintaksės analizatorius) -->
+  <g transform="translate(147, 237)">
+    <circle cx="0" cy="0" r="28" fill="#1c1d22" stroke="#ffffff" stroke-width="2.5"/>
+    <path d="M -9,-7 L -16,0 L -9,7 M 9,-7 L 16,0 L 9,7 M -2,10 L 3,-10" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Kvantiniai ryšio mazgai terminalo erdvėje -->
+  <circle cx="450" cy="140" r="3" fill="#22cc66" opacity="0.7"/>
+  <circle cx="280" cy="740" r="4" fill="#4fc3f7" opacity="0.5"/>
+  <circle cx="620" cy="730" r="3" fill="#ff5252" opacity="0.6"/>
 </svg>
 
