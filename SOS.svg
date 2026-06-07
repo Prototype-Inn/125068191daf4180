@@ -1,124 +1,132 @@
 <svg xmlns="http://w3.org" viewBox="0 0 900 900" width="100%" height="100%">
   <defs>
-    <!-- Gist ir terminalo kosminis fonas -->
-    <radialGradient id="cyber-bg" cx="50%" cy="50%" r="75%">
-      <stop offset="0%" stop-color="#18111b"/>
-      <stop offset="60%" stop-color="#09050d"/>
-      <stop offset="100%" stop-color="#020004"/>
+    <!-- Gili tamsi terminalo erdvė -->
+    <radialGradient id="matrix-reloaded-bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#140602"/>
+      <stop offset="60%" stop-color="#080201"/>
+      <stop offset="100%" stop-color="#000000"/>
     </radialGradient>
 
-    <!-- Super-švytėjimas Ubuntu branduoliui (E-Star) -->
-    <filter id="estar-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="20" result="blur" />
+    <!-- E-Star super-švytėjimas, matomas net favicon masteliu -->
+    <filter id="estar-neon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <filter id="node-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
+    <filter id="electron-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <!-- Oficialūs sisteminiai gradientai -->
-    <linearGradient id="ubuntu-core" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff9d5c"/>
-      <stop offset="50%" stop-color="#e95420"/>
-      <stop offset="100%" stop-color="#aea110"/> <!-- E-Star auksinis atspalvis -->
+    <!-- Matrix Reloaded oranžinės liepsnos gradientai -->
+    <linearGradient id="reloaded-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffaa66"/>
+      <stop offset="40%" stop-color="#e95420"/>
+      <stop offset="100%" stop-color="#992200"/>
     </linearGradient>
 
-    <linearGradient id="neovim-green" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#2de377"/>
-      <stop offset="100%" stop-color="#008833"/>
+    <linearGradient id="neovim-core" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffbb00"/>
+      <stop offset="100%" stop-color="#e95420"/>
     </linearGradient>
 
     <linearGradient id="ai-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#4fc3f7"/>
       <stop offset="100%" stop-color="#0288d1"/>
     </linearGradient>
-
-    <linearGradient id="daily-fire" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff5252"/>
-      <stop offset="100%" stop-color="#ff7a00"/>
-    </linearGradient>
   </defs>
 
   <!-- 1. FONAS -->
-  <rect width="900" height="900" fill="url(#cyber-bg)"/>
+  <rect width="900" height="900" fill="url(#matrix-reloaded-bg)"/>
 
-  <!-- 2. KODO IR TERMINALO TEKSTŪRA (Matrix / Gist Texture) -->
-  <g fill="#2de377" font-family="monospace" font-size="11" opacity="0.12" letter-spacing="2">
-    <!-- Vertikalios kodo sekcijos iš jūsų Gist logikos -->
-    <text x="40" y="80">PROTOTYPE: PHP_ZTS_ENABLED=1</text>
-    <text x="40" y="100">01001100 01001111 01001100</text>
-    <text x="40" y="120">CPU_MASK=0x8 [AUDIT_CORE]</text>
-    <text x="40" y="140">QUIC_HTTP3_PORT=443</text>
+  <!-- 2. SUTANKINTA MATRIX RELOADED KODO TEKSTŪRA (Orange Code Stream) -->
+  <g fill="#e95420" font-family="monospace" font-size="10" opacity="0.18" letter-spacing="1">
+    <!-- Kairysis tankus kodo blokas -->
+    <text x="30" y="50">ZTS_INIT: 0x8</text>
+    <text x="30" y="70">PHP_ZTS=ENABLED</text>
+    <text x="30" y="90">CPU_MASK=0x7_0x8</text>
+    <text x="30" y="110">SYS_ORCH_PWA_W3C</text>
+    <text x="30" y="130">HTTP3_QUIC_UDP_443</text>
+    <text x="30" y="150">REDIS_RATE_LIMIT=1</text>
+    <text x="30" y="170">APP_ARMOR_ENFORCE</text>
+    <text x="30" y="190">OFFLINE_HTML_LOAD</text>
+    <text x="30" y="210">CACHE_DUMP_FLUSH</text>
+    <text x="30" y="230">VDAI_RE_AUDIT_OK</text>
     
-    <text x="680" y="80">daily.dev >> FETCH</text>
-    <text x="680" y="100">AI_MODELS [GEMINI, CODEX]</text>
-    <text x="680" y="120">APP_ARMOR=ENFORCED</text>
-    <text x="680" y="140">PWA_W3C_SHIELD</text>
+    <!-- Dešinysis tankus kodo blokas -->
+    <text x="690" y="50">daily.dev_SYNC</text>
+    <text x="690" y="70">AI_CORE_LOAD_G1</text>
+    <text x="690" y="90">GEMINI_API_CALL</text>
+    <text x="690" y="110">CODEX_SYNTAX_OK</text>
+    <text x="690" y="130">NEOVIM_INIT_VIM</text>
+    <text x="690" y="150">SESSION_CLEANUP</text>
+    <text x="690" y="170">RADICAL_TRANSP</text>
+    <text x="690" y="190">CISO_THREAT_DET</text>
+    <text x="690" y="210">GS_TRUST_RECONF</text>
+    <text x="690" y="230">SYS_STATUS_200</text>
 
-    <text x="40" y="780">CISO_REPORT -> VDAI</text>
-    <text x="40" y="800">SESSION_CACHE_FLUSH=TRUE</text>
-    <text x="40" y="820">RADICAL_TRANSPARENCY_GS</text>
-
-    <text x="660" y="780">NEOVIM_VIMRC_LOADED</text>
-    <text x="660" y="800">REDIS_RATELIMIT=ACTIVE</text>
-    <text x="660" y="820">SYS_ORCHESTRATION_OK</text>
+    <!-- Apatinis tankus tinklas užpildymui -->
+    <text x="30" y="730">CORE_AFFINITY_0x8</text>
+    <text x="30" y="750">PWA_SHIELD_ACTIVE</text>
+    <text x="30" y="770">CRISIS_SIM_LOAD_1</text>
+    <text x="30" y="790">INTEGRITY_CHECK_Y</text>
+    
+    <text x="690" y="730">NEOVIM_ZTS_ASYNC</text>
+    <text x="690" y="750">OPENAI_FALLBACK</text>
+    <text x="690" y="770">BROKEN_CACHE_CLR</text>
+    <text x="690" y="790">CPO_DECISION_OK</text>
   </g>
 
   <!-- 3. KVANTAINĖS ORBITOS -->
-  <g stroke-width="1.5" fill="none" opacity="0.3">
-    <ellipse cx="450" cy="450" rx="360" ry="110" stroke="url(#daily-fire)" stroke-dasharray="10 5"/>
-    <ellipse cx="450" cy="450" rx="380" ry="130" stroke="url(#ai-cyan)" transform="rotate(30 450 450)"/>
-    <ellipse cx="450" cy="450" rx="380" ry="130" stroke="#ffffff" transform="rotate(-30 450 450)"/>
+  <g stroke-width="2" fill="none" opacity="0.25">
+    <ellipse cx="450" cy="450" rx="370" ry="115" stroke="#e95420" stroke-dasharray="8 4"/>
+    <ellipse cx="450" cy="450" rx="390" ry="135" stroke="url(#ai-cyan)" transform="rotate(30 450 450)"/>
+    <ellipse cx="450" cy="450" rx="390" ry="135" stroke="#ffffff" transform="rotate(-30 450 450)"/>
   </g>
 
-  <!-- 4. DOMINUOJANTIS UBUNTU BRANDUOLYS (E-STAR) -->
-  <g transform="translate(450, 450)" filter="url(#estar-glow)">
-    <!-- Dominuojanti Ubuntu atominė masė -->
-    <circle cx="0" cy="0" r="140" fill="none" stroke="url(#ubuntu-core)" stroke-width="20"/>
+  <!-- 4. MAKSIMALIAI IŠDIDINTAS UBUNTU BRANDUOLYS (E-STAR / FAVICON READY) -->
+  <!-- Ši dalis išlaiko struktūrą net suspaudus iki 16x16 ar 32x32 taškų -->
+  <g transform="translate(450, 450)" filter="url(#estar-neon)">
+    <!-- Pagrindinis storas E-Star žiedas -->
+    <circle cx="0" cy="0" r="150" fill="none" stroke="url(#reloaded-orange)" stroke-width="26"/>
     
-    <!-- E-Star (Ubuntu draugų rato mazgai / protonai) -->
-    <circle cx="0" cy="-140" r="22" fill="#ffffff"/>
-    <circle cx="121" cy="70" r="22" fill="#ffffff"/>
-    <circle cx="-121" cy="70" r="22" fill="#ffffff"/>
+    <!-- Stambūs protonų mazgai -->
+    <circle cx="0" cy="-150" r="26" fill="#ffffff"/>
+    <circle cx="130" cy="75" r="26" fill="#ffffff"/>
+    <circle cx="-130" cy="75" r="26" fill="#ffffff"/>
     
-    <!-- Atominės išpjovos žiede -->
-    <path d="M 0,-105 L 0,-175" stroke="#18111b" stroke-width="14"/>
-    <path d="M 91,53 L 151,87" stroke="#18111b" stroke-width="14"/>
-    <path d="M -91,53 L -151,87" stroke="#18111b" stroke-width="14"/>
+    <!-- Ryškios išpjovos geresniam favicon skaitomumui -->
+    <path d="M 0,-110 L 0,-190" stroke="#140602" stroke-width="18"/>
+    <path d="M 95,55 L 165,95" stroke="#140602" stroke-width="18"/>
+    <path d="M -95,55 L -165,95" stroke="#140602" stroke-width="18"/>
 
-    <!-- Subtili NeoVim integracija pačiame žvaigždės centre -->
-    <g transform="scale(0.9) translate(-32, -37)" opacity="0.95">
-      <path d="M0,10 L20,0 L20,65 L0,75 Z" fill="url(#neovim-green)"/>
-      <path d="M45,0 L65,10 L65,75 L45,65 Z" fill="url(#neovim-green)"/>
+    <!-- NeoVim integracija E-Star žvaigždės centre (perspalvinta Reloaded tonais) -->
+    <g transform="scale(1.1) translate(-32, -37)">
+      <path d="M0,10 L20,0 L20,65 L0,75 Z" fill="url(#neovim-core)" opacity="0.9"/>
+      <path d="M45,0 L65,10 L65,75 L45,65 Z" fill="url(#neovim-core)"/>
       <path d="M20,0 L45,65 L45,65 L20,15 Z" fill="#ffffff"/>
     </g>
   </g>
 
-  <!-- 5. INDEPENDENT ELEKTRONAI (Išoriniai Gist įrankiai) -->
+  <!-- 5. NEPRIKLAUSOMI ELEKTRONAI (Išoriniai įrankiai) -->
 
-  <!-- daily.dev elektronas -->
-  <g transform="translate(810, 450)" filter="url(#node-glow)">
-    <circle cx="0" cy="0" r="32" fill="url(#daily-fire)"/>
-    <path d="M -8,12 L -8,-12 Q 8,-12 8,0 Q 8,12 -8,12 Z" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <!-- daily.dev ugninis elektronas -->
+  <g transform="translate(820, 450)" filter="url(#electron-glow)">
+    <circle cx="0" cy="0" r="34" fill="url(#reloaded-orange)"/>
+    <path d="M -8,12 L -8,-12 Q 8,-12 8,0 Q 8,12 -8,12 Z" fill="none" stroke="#ffffff" stroke-width="4.5"/>
     <circle cx="0" cy="0" r="5" fill="#ffffff"/>
   </g>
 
   <!-- Gemini AI elektronas -->
-  <g transform="translate(760, 240)" filter="url(#node-glow)">
+  <g transform="translate(765, 235)" filter="url(#electron-glow)">
     <circle cx="0" cy="0" r="28" fill="url(#ai-cyan)"/>
     <path d="M 0,-16 Q 0,0 16,0 Q 0,0 0,16 Q 0,0 -16,0 Q 0,0 0,-16 Z" fill="#ffffff"/>
   </g>
 
   <!-- Codex elektronas -->
-  <g transform="translate(140, 240)">
-    <circle cx="0" cy="0" r="28" fill="#15101a" stroke="#ffffff" stroke-width="2"/>
+  <g transform="translate(135, 235)">
+    <circle cx="0" cy="0" r="28" fill="#140602" stroke="#ffffff" stroke-width="2"/>
     <path d="M -9,-7 L -16,0 L -9,7 M 9,-7 L 16,0 L 9,7 M -2,10 L 3,-10" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
   </g>
-
-  <!-- Kvantiniai spinduliai, jungiantys tekstūrą su E-Star -->
-  <line x1="450" y1="200" x2="450" y2="270" stroke="#2de377" stroke-width="2" opacity="0.3" stroke-dasharray="5 5"/>
-  <line x1="230" y1="680" x2="310" y2="600" stroke="#ff5252" stroke-width="2" opacity="0.3" stroke-dasharray="5 5"/>
 </svg>
 
