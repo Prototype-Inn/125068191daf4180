@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATATA — Ryšys nutrūko</title>
+    <style>
+        /* Matrix Reloaded tamsi gili aplinka */
+        body {
+            background-color: #050100;
+            color: #e95420;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Sutankintas skaitmeninio tinklelio fonas */
+        .matrix-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 10px;
+            opacity: 0.12;
+            white-space: nowrap;
+            user-select: none;
+            pointer-events: none;
+            line-height: 1.6;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Centrinis PWA krizės valdymo blokas */
+        .container {
+            text-align: center;
+            background: rgba(12, 4, 2, 0.9);
+            padding: 40px;
+            border: 2px solid #e95420;
+            border-radius: 16px;
+            box-shadow: 0 0 30px rgba(233, 84, 32, 0.3);
+            z-index: 10;
+            max-width: 450px;
+            width: 90%;
+        }
+
+        /* E-Star logotipas su PWA pulsavimo efektu */
+        .icon-wrapper {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 30px;
+            animation: pulse 2.5s infinite ease-in-out;
+        }
+
+        h1 {
+            font-size: 22px;
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 8px rgba(233, 84, 32, 0.6);
+        }
+
+        p {
+            font-size: 14px;
+            color: #ffb373;
+            line-height: 1.5;
+            margin: 0 0 25px 0;
+        }
+
+        /* Terminalo stiliaus mygtukas rankiniam sistemos perkrovimui */
+        .btn {
+            background-color: transparent;
+            color: #e95420;
+            border: 2px solid #e95420;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(233, 84, 32, 0.1);
+        }
+
+        .btn:hover {
+            background-color: #e95420;
+            color: #050100;
+            box-shadow: 0 0 20px rgba(233, 84, 32, 0.6);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(233, 84, 32, 0.4)); }
+            50% { transform: scale(1.04); filter: drop-shadow(0 0 25px rgba(233, 84, 32, 0.8)); }
+            100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(233, 84, 32, 0.4)); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SUTANKINTA KODO TEKSTŪRA FONE -->
+    <div class="matrix-bg">
+        QUIC_CONNECTION_CLOSE // NETWORK_ERR_NO_ROUTE<br>
+        CPU_MASK=0x8 [STANDBY_MODE]<br>
+        PHP_ZTS_ASYNC_PAUSE=1<br>
+        PWA_W3C_SHIELD: ENFORCED<br>
+        OFFLINE_HTML_LOAD_SUCCESS<br>
+        REDIS_RATELIMIT_FREEZE<br>
+        SESSION_CACHE_SECURE<br>
+        CISO_STATUS_LOCAL_ONLY<br>
+        SYS_STATUS_503_OFFLINE<br>
+        TRYING_QUIC_RECONNECT...<br>
+        APP_ARMOR=RESTRICTED_SANDBOX
+    </div>
+
+    <!-- KRIZĖS VALDYMO KONTEINERIS -->
+    <div class="container">
+        <div class="icon-wrapper">
+            <!-- Jūsų paruoštas PWA atominis E-Star + NeoVim branduolys (Inline SVG) -->
+            <svg xmlns="http://w3.org" viewBox="0 0 360 360" width="100%" height="100%">
+              <defs>
+                <radialGradient id="fb" cx="50%" cy="50%" r="70%">
+                  <stop offset="0%" stop-color="#1c0702"/>
+                  <stop offset="100%" stop-color="#050100"/>
+                </radialGradient>
+                <linearGradient id="ro" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffb373"/>
+                  <stop offset="50%" stop-color="#e95420"/>
+                  <stop offset="100%" stop-color="#991f00"/>
+                </radialGradient>
+                <linearGradient id="nv" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#ffcc00"/>
+                  <stop offset="100%" stop-color="#e95420"/>
+                </linearGradient>
+              </defs>
+              <rect width="360" height="360" rx="72" fill="url(#fb)"/>
+              <g transform="translate(180, 180)">
+                <circle cx="0" cy="0" r="115" fill="none" stroke="url(#ro)" stroke-width="24"/>
+                <circle fill="#ffffff" cx="0" cy="-115" r="22"/>
+                <circle fill="#ffffff" cx="100" cy="58" r="22"/>
+                <circle fill="#ffffff" cx="-100" cy="58" r="22"/>
+                <path stroke="#050100" stroke-width="16" d="M 0,-85 L 0,-145"/>
+                <path stroke="#050100" stroke-width="16" d="M 74,43 L 126,73"/>
+                <path stroke="#050100" stroke-width="16" d="M -74,43 L -126,73"/>
+                <g transform="scale(0.9) translate(-32, -37)">
+                  <path d="M0,10 L20,0 L20,65 L0,75 Z" fill="url(#nv)" opacity="0.95"/>
+                  <path d="M45,0 L65,10 L65,75 L45,65 Z" fill="url(#nv)"/>
+                  <path d="M20,0 L45,65 L45,65 L20,15 Z" fill="#ffffff"/>
+                </g>
+              </g>
+            </svg>
+        </div>
+
+        <h1>Ryšys prarastas</h1>
+        <p>Aplikacija veikia lokaliame PWA režime. Gist infrastruktūra ir išorinis AI modelis nepasiekiami, kol neatsistatys HTTP/3 QUIC tunelis.</p>
+        
+        <button class="btn" onclick="window.location.reload()">Tikrinti ryšį</button>
+    </div>
+
+</body>
+</html>
