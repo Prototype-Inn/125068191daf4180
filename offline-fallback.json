@@ -1,0 +1,31 @@
+{
+  "system": {
+    "app_id": "LATATA_PWA",
+    "status": "OFFLINE_LOCAL_MODE",
+    "orchestration": {
+      "cpu_affinity_mask": "0x8",
+      "pwa_shield": "ACTIVE_W3C",
+      "network_protocol": "HTTP3_QUIC_FALLBACK"
+    },
+    "security": {
+      "app_armor": "ENFORCED",
+      "session_cache": "SECURE_LOCAL_FLUSHED"
+    }
+  },
+  "ai_fallback_response": {
+    "model": "Local_Codex_Stub_v1.0.4",
+    "status": 200,
+    "message": "Sistemos pranešimas: Ryšys su pagrindiniu AI modeliu (Gemini/Codex API) nutrūko. Įjungtas vietinis atominis saugiklis.",
+    "insights": [
+      "Visi naudotojo sesijos duomenys yra saugūs ir izoliuoti lokaliame cache.",
+      "Radikalaus skaidrumo protokolas aktyvuotas (GS pasitikėjimo valdymo strategija).",
+      "Laukiama sėkmingo HTTP/3 QUIC rankos paspaudimo (Handshake) su serveriu."
+    ],
+    "timestamp": 1775210400
+  },
+  "cache_meta": {
+    "version": "1.0.4",
+    "integrity_check": "SUCCESS",
+    "action_required": "WAIT_FOR_NETWORK_RECONNECT"
+  }
+}
