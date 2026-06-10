@@ -237,3 +237,7 @@ else:
     print('Simbolių nerasta, paleiskite komandą iš naujo.')
 "
 ```
+
+## 23598939d81ec25a
+
+`/../`
