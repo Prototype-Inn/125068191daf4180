@@ -50,3 +50,26 @@ else:
     print('Simbolių nerasta, paleiskite komandą iš naujo.')
 "
 ```
+
+```shell
+php -r "const DIFF = 3; echo preg_quote(base64_encode(hash('whirlpool', bin2hex(random_bytes(DIFF)))));" | python3 -c "
+import sys
+data = sys.stdin.read().strip()
+if '\\\\' in data:
+    idx = data.find('\\\\')
+    symbol = data[idx+1]
+    shift_amount = ord(symbol)
+    
+    clean_data = data.replace('\\\\', '')
+    hex_repr = clean_data.encode('utf-8').hex()
+    num = int(hex_repr, 16)
+    
+    # Atliekame binarinį postūmį į dešinę (Bitwise Shift Right)
+    shifted_num = num >> shift_amount
+    
+    print(f'Sugautas simbolis: {symbol} (Baitas: {shift_amount})')
+    print(f'Postūmio į dešinę rezultatas (HEX): {hex(shifted_num)[2:]}')
+else:
+    print('Simbolių nerasta, paleiskite komandą iš naujo.')
+"
+```
