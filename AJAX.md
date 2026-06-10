@@ -21,3 +21,7 @@ sudo apt install php-mbstring
 ```shell
 php -r "var_dump(mb_get_info());"`
 ```
+
+## 803f725a42448740
+
+`php -r "const DIFF = 3; echo preg_quote(base64_encode(hash('whirlpool', bin2hex(random_bytes(DIFF)))));" | grep -oE '\\.' | tr -d '\\' | tr -d '\n'`
