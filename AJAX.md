@@ -282,3 +282,46 @@ else:
     print('Simbolių nerasta, paleiskite komandą iš naujo.')
 "
 ```
+
+## 63325e01185633ec
+
+```shell
+php -r "const DIFF = 3; echo preg_quote(base64_encode(hash('whirlpool', bin2hex(random_bytes(DIFF)))));" | python3 -c "
+import sys
+data = sys.stdin.read().strip()
+if '\\\\' in data:
+    idx = data.find('\\\\')
+    symbol = data[idx+1]
+    
+    # Standartinė Base64 abėcėlė
+    b64_alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+    
+    # Surandame poslinkio dydį pagal sugauto simbolio vietą abėcėlėje
+    # Jei simbolis '=' (padding), naudojame jo ASCII reikšmę % 64
+    shift_amount = b64_alphabet.find(symbol)
+    if shift_amount == -1:
+        shift_amount = ord(symbol) % 64
+        
+    clean_data = data.replace('\\\\', '')
+    shifted_chars = []
+    
+    for char in clean_data:
+        if char in b64_alphabet:
+            # Surandame esamą poziciją, pridedame poslinkį ir sukam ciklu (% 64)
+            orig_idx = b64_alphabet.find(char)
+            new_idx = (orig_idx + shift_amount) % 64
+            shifted_chars.append(b64_alphabet[new_idx])
+        else:
+            # Jei simbolis yra '=', paliekame jį vietoje
+            shifted_chars.append(char)
+            
+    result_text = ''.join(shifted_chars)
+    
+    print(f'Sugautas simbolis: {symbol} (Poslinkis abėcėlėje: {shift_amount})')
+    print(f'Pradinis ilgis:    {len(clean_data)} simbolių')
+    print(f'Galutinis ilgis:   {len(result_text)} simbolių (Prarasta: 0.00%)')
+    print(f'Rezultatas:        {result_text[:60]}...')
+else:
+    print('Simbolių nerasta, paleiskite komandą iš naujo.')
+"
+```
