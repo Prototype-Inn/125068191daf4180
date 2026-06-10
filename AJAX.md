@@ -168,3 +168,39 @@ else:
     print('Simbolių nerasta, paleiskite komandą iš naujo.')
 "
 ```
+
+`/../`
+
+```shell
+php -r "const DIFF = 3; echo preg_quote(base64_encode(hash('whirlpool', bin2hex(random_bytes(DIFF)))));" | python3 -c "
+import sys
+data = sys.stdin.read().strip()
+if '\\\\' in data:
+    idx = data.find('\\\\')
+    symbol = data[idx+1]
+    shift_amount = ord(symbol)
+    
+    clean_data = data.replace('\\\\', '')
+    hex_repr = clean_data.encode('utf-8').hex()
+    num = int(hex_repr, 16)
+    
+    bit_length = len(clean_data) * 8
+    shift_amount = shift_amount % bit_length
+    
+    # ROL ir XOR operacijos
+    shifted_num = ((num << shift_amount) | (num >> (bit_length - shift_amount))) & ((1 << bit_length) - 1)
+    xor_num = num ^ shifted_num
+    
+    # Konvertuojame atgal į skaitomą tekstą
+    byte_count = bit_length // 8
+    xor_bytes = xor_num.to_bytes(byte_count, byteorder='big')
+    
+    # Naudojame 'replace' klaidų valdymą, jei po XOR atsiranda ne ASCII simbolių
+    result_text = xor_bytes.decode('utf-8', errors='replace')
+    
+    print(f'Sugautas simbolis: {symbol} (ASCII: {ord(symbol)})')
+    print(f'XORed tekstas: {result_text[:60]}...')
+else:
+    print('Simbolių nerasta, paleiskite komandą iš naujo.')
+"
+```
