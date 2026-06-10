@@ -8,4 +8,13 @@ Umidigi`s`|~`_en`~|`s`|`ieee.h` ***`c`11***.
 
 ## ff78f83ede9c7615
 
-`libintl` = `libicu` ☣ `libiconv` | `unicode`
+(`libintl` = `libicu` ☣ `libiconv` | `unicode`) € `/../`
+
+## 7dbed899fe5e03e6
+
+```shell
+sudo apt install php-mbstring
+```
+```shell
+php -r "var_dump(mb_get_info());"`
+```
