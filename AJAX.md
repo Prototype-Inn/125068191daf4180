@@ -15,6 +15,9 @@ Umidigi`s`|~`_en`~|`s`|`ieee.h` ***`c`11***.
 ```shell
 sudo apt install php-mbstring
 ```
+
+**ASCII** `->` ***UTF-8***
+
 ```shell
 php -r "var_dump(mb_get_info());"`
 ```
